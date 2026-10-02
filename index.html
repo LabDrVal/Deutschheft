@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Deutschheft">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#E9EEF5">
+<title>Deutschheft</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEcElEQVR4nO3dsZHbRhiGYcrjDhw7kkehK1AgqwGV4dR2Ifal14XUgJy4AodKFbsHB5jhcI78wF0AXGBXzxNpqCV5At77eZTA1avX7z6e4Jbv9v4COC5xEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDqLv93riL58/lCz7+sfv0y9+/POvR345R/fm/af2T7pDHIVZcGk6aI0Taf2yoow1Gh+9pnEoY72Wx7BdHMrYSrMj6d0KUaM4jI1ttTmeJgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgdRoy0Y/v73v2V3/Gn1I7CYyUHUaHL88vMPy+74dfUjJNNGKD7EO+MbnRyXW+QUbpfz5v2nXfZe2tGYcZSfyGnZ3cXnBbV9TF9Jp1UNGMfdqbDgBC+7+4L5dCijxXF9PqpGSOHtJY95vaa7ETJaHHfNnJ6qMzf/OFs9y76GiqPqu79k5fwd1wyVLhIZJ45lo7528fxb361mz0GME8e8dKavT/bMTyrT4su73P2Rc3qKlNTBR8ggcWw7Nqpmxsyb1cu7zIycw/YxQhwL5v/lgpK/JH2xZsFdTmFQFT7aLkaI49r1/C9ZX/W7C+5ScsdD6T6O67Gx+Nu69qlTNCVDq2pu7aXvOO6+Wq8/9FUTourpjpzFpO84ri0bG9e3l78wncfAVrPnODqOo/AFpfAtw3nBspN98NO8TMdXgj0/vT2dTr/+9s/dZ5lWTguen966qKxQx5Nj8vz0djr35wLYyiBXgg051XfX/eTgccRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIOr4SjAezeQgGuRKsA2dr1t2dZnJES3+COthP/taa+Q4FnyG/Xp/jpWP0LWR45is/HD9skcYI5Fh46jdrG3BJj4vFowRxKUx47i5WVvV+ptrNt9U7uAGjKP21eHF7Xf34il82AHe7IwWx/WZnvnd+fUlfZTvJtWjoeK4eaZn+pgv6eYt5zuWbPXUu3HiKJ8BN7eEm9mXYasdgrozSBy1M6CwjPIFhWv6MkIc5TOg6vbyZcP8kPFC93FUzYCVW4HdjGDILCZ9x1H76nAqez9S8giLt3rqSKN/lX2QL58/LPhH1K12kRu7jFPvk+P0zZynXYxwJZhtvh6k+8nB47gSjMjkIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg2iEK8F4EJODyJVgRCYHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcRK4EIzI5iFwJRtRocgzw3xYdSpvj6WWFqF0chsdWmh3JppNDH+u1PIatX1b0sUbjo7fD/5ow/QltZV9ll2+qV6/ffWz/rHTBuxUicRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB9H/StLABN/8JrcAAAAASUVORK5CYII=">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEcElEQVR4nO3dsZHbRhiGYcrjDhw7kkehK1AgqwGV4dR2Ifal14XUgJy4AodKFbsHB5jhcI78wF0AXGBXzxNpqCV5At77eZTA1avX7z6e4Jbv9v4COC5xEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDqLv93riL58/lCz7+sfv0y9+/POvR345R/fm/af2T7pDHIVZcGk6aI0Taf2yoow1Gh+9pnEoY72Wx7BdHMrYSrMj6d0KUaM4jI1ttTmeJgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgdRoy0Y/v73v2V3/Gn1I7CYyUHUaHL88vMPy+74dfUjJNNGKD7EO+MbnRyXW+QUbpfz5v2nXfZe2tGYcZSfyGnZ3cXnBbV9TF9Jp1UNGMfdqbDgBC+7+4L5dCijxXF9PqpGSOHtJY95vaa7ETJaHHfNnJ6qMzf/OFs9y76GiqPqu79k5fwd1wyVLhIZJ45lo7528fxb361mz0GME8e8dKavT/bMTyrT4su73P2Rc3qKlNTBR8ggcWw7Nqpmxsyb1cu7zIycw/YxQhwL5v/lgpK/JH2xZsFdTmFQFT7aLkaI49r1/C9ZX/W7C+5ScsdD6T6O67Gx+Nu69qlTNCVDq2pu7aXvOO6+Wq8/9FUTourpjpzFpO84ri0bG9e3l78wncfAVrPnODqOo/AFpfAtw3nBspN98NO8TMdXgj0/vT2dTr/+9s/dZ5lWTguen966qKxQx5Nj8vz0djr35wLYyiBXgg051XfX/eTgccRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIOr4SjAezeQgGuRKsA2dr1t2dZnJES3+COthP/taa+Q4FnyG/Xp/jpWP0LWR45is/HD9skcYI5Fh46jdrG3BJj4vFowRxKUx47i5WVvV+ptrNt9U7uAGjKP21eHF7Xf34il82AHe7IwWx/WZnvnd+fUlfZTvJtWjoeK4eaZn+pgv6eYt5zuWbPXUu3HiKJ8BN7eEm9mXYasdgrozSBy1M6CwjPIFhWv6MkIc5TOg6vbyZcP8kPFC93FUzYCVW4HdjGDILCZ9x1H76nAqez9S8giLt3rqSKN/lX2QL58/LPhH1K12kRu7jFPvk+P0zZynXYxwJZhtvh6k+8nB47gSjMjkIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg2iEK8F4EJODyJVgRCYHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcRK4EIzI5iFwJRtRocgzw3xYdSpvj6WWFqF0chsdWmh3JppNDH+u1PIatX1b0sUbjo7fD/5ow/QltZV9ll2+qV6/ffWz/rHTBuxUicRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB9H/StLABN/8JrcAAAAASUVORK5CYII=">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --desk:#E9EEF5; --paper:#FDFEFF; --ink:#18233D; --muted:#5F6E88; --line:#D3DCE9;
+  --blau:#2340B0; --blau-soft:#E3E8FA; --rule:#BCD0EC; --margin:#E07070;
+  --der:#2B67D1; --die:#CF3F57; --das:#23915A; --ok:#23915A; --bad:#C2384F;
+  --radius-s:8px; --radius-m:14px;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{height:100%;margin:0}
+body{background:var(--desk);color:var(--ink);font:16px/1.5 "Instrument Sans",-apple-system,"Helvetica Neue",Arial,sans-serif;-webkit-text-size-adjust:100%;overflow:hidden}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:3px solid var(--blau);outline-offset:2px}
+#app{display:flex;flex-direction:column;height:100%}
+#main{flex:1;overflow:auto;-webkit-overflow-scrolling:touch}
+#main.fixed{overflow:hidden;display:flex;flex-direction:column}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 40px}
+
+/* tabs */
+#tabs{display:flex;justify-content:center;gap:4px;background:var(--paper);border-top:1px solid var(--line);padding:6px 8px}
+#tabs.hidden{display:none}
+#tabs button{flex:0 1 130px;border:0;background:none;padding:6px 4px;border-radius:var(--radius-s);display:flex;flex-direction:column;align-items:center;gap:2px;font-size:13px;color:var(--muted)}
+#tabs button svg{width:24px;height:24px}
+#tabs button[aria-current="true"]{color:var(--blau);font-weight:600}
+
+/* generic */
+h1{font-size:30px;line-height:1.15;margin:0;font-weight:700;letter-spacing:-.01em}
+h2{font-size:21px;margin:28px 0 10px;font-weight:600}
+h3{font-size:17px;margin:0 0 6px;font-weight:600}
+p{margin:0 0 10px}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+.btn{border:1px solid var(--line);background:var(--paper);padding:10px 16px;border-radius:999px;font-weight:500;min-height:44px}
+.btn.primary{background:var(--blau);border-color:var(--blau);color:#fff}
+.btn:disabled{opacity:.45;cursor:default}
+.btn.slim{padding:6px 12px;min-height:36px;font-size:14px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.spacer{flex:1}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);padding:16px 18px}
+.panel+.panel{margin-top:12px}
+input[type=text],input[type=password],input[type=search],select,textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:var(--radius-s);padding:10px 12px;font-size:16px}
+textarea{min-height:120px;resize:vertical;line-height:1.6}
+label.field{display:block;margin:14px 0 6px;font-weight:600}
+a{color:var(--blau)}
+
+/* calendar */
+.cal-head{display:flex;align-items:center;gap:8px;margin:6px 0 16px}
+.cal-head h1{flex:1}
+.iconbtn{border:1px solid var(--line);background:var(--paper);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:22px;line-height:1}
+.weekdays,.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.weekdays div{font-size:13px;color:var(--muted);text-align:center;padding-bottom:2px}
+.day{position:relative;aspect-ratio:3/4;border:1px solid var(--line);background:var(--paper);border-radius:var(--radius-s);padding:0;overflow:hidden;text-align:left}
+.day.empty{visibility:hidden}
+.day .num{position:absolute;top:4px;left:6px;font-size:13px;font-weight:600;z-index:1;background:rgba(253,254,255,.85);border-radius:6px;padding:0 4px}
+.day img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top}
+.day.today{border:2px solid var(--blau)}
+.day.today .num{color:var(--blau)}
+.day.future{opacity:.55}
+.day .dot{position:absolute;bottom:5px;right:6px;width:8px;height:8px;border-radius:50%;background:var(--ok)}
+.cal-foot{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.dot.wait{background:var(--paper);border:2px solid var(--blau)}
+.dot-inline{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--ok);vertical-align:0}
+.dot-inline.wait{background:transparent;border:2px solid var(--blau)}
+.note{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--blau);border-radius:var(--radius-s);padding:12px 14px;margin:0 0 14px;font-size:15px}
+.chips .chip{cursor:pointer}
+
+/* page editor */
+.pg-head{display:flex;align-items:center;gap:8px;padding:10px 12px 6px;background:var(--desk)}
+.pg-head .title{flex:1;text-align:center;font-weight:600;font-size:18px;line-height:1.2}
+.pg-head .title small{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+.toolbar{display:flex;gap:6px;align-items:center;padding:6px 12px 10px;flex-wrap:wrap;background:var(--desk);border-bottom:1px solid var(--line)}
+.seg{display:inline-flex;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{border:0;background:none;border-radius:999px;padding:6px 12px;font-size:14px;min-height:36px}
+.seg button[aria-pressed="true"]{background:var(--blau);color:#fff}
+.swatch{width:30px;height:30px;border-radius:50%;border:3px solid var(--paper);box-shadow:0 0 0 1px var(--line);padding:0}
+.swatch[aria-pressed="true"]{box-shadow:0 0 0 2px var(--ink)}
+.size{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--paper);display:grid;place-items:center;padding:0}
+.size i{display:block;border-radius:50%;background:var(--ink)}
+.size[aria-pressed="true"]{border:2px solid var(--ink)}
+.scroller{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;padding:16px 12px 30px}
+.sheetwrap{max-width:900px;margin:0 auto;position:relative}
+.sheetwrap canvas{display:block;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+#paper{border:1px solid #C9D4E5;border-radius:4px;box-shadow:4px 4px 0 #D9E1EC}
+#live{position:absolute;left:0;top:0;touch-action:none}
+#main.fixed,#main.fixed *{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.extend{display:block;margin:14px auto 0}
+
+/* bottom sheet */
+#sheet{position:fixed;inset:0;z-index:20;display:none}
+#sheet.open{display:block}
+#sheet .scrim{position:absolute;inset:0;background:rgba(24,35,61,.32)}
+#sheet .body{position:absolute;left:0;right:0;bottom:0;max-height:86%;background:var(--desk);border-radius:18px 18px 0 0;overflow:auto;-webkit-overflow-scrolling:touch;padding:0 0 calc(24px + env(safe-area-inset-bottom,0px));animation:up .22s ease-out}
+@media (min-width:900px){#sheet .body{left:auto;top:0;bottom:0;max-height:none;width:min(560px,50vw);border-radius:0;animation:side .22s ease-out}}
+@keyframes up{from{transform:translateY(30px);opacity:.5}}
+@keyframes side{from{transform:translateX(30px);opacity:.5}}
+@media (prefers-reduced-motion:reduce){#sheet .body{animation:none}}
+.sheet-head{position:sticky;top:0;background:var(--desk);display:flex;align-items:center;gap:8px;padding:14px 18px 10px;border-bottom:1px solid var(--line);z-index:1}
+.sheet-head h3{flex:1;margin:0;font-size:19px}
+.sheet-content{padding:16px 18px}
+
+/* analysis */
+.sent{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);padding:14px 16px;margin-top:12px}
+.sent .de{font-size:19px;line-height:1.45}
+.sent .orig{font-size:15px;color:var(--muted);margin-top:4px}
+.sent .tr{font-size:15px;color:var(--muted);margin-top:6px;font-style:italic}
+ins{text-decoration:none;background:#DDF2E6;color:#145C38;border-radius:4px;padding:0 2px}
+del{text-decoration:line-through;text-decoration-color:var(--bad);color:var(--bad)}
+.mist{margin:10px 0 0;padding:0;list-style:none}
+.mist li{padding:8px 0;border-top:1px dashed var(--line);font-size:15px}
+.mist b{font-weight:600}
+.gram{font-size:15px;margin-top:10px;padding:8px 10px;background:var(--blau-soft);border-radius:var(--radius-s)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{font-size:14px;border:1px solid var(--line);border-radius:999px;padding:2px 10px;background:#fff}
+.art{font-weight:700}
+.art.der{color:var(--der)} .art.die{color:var(--die)} .art.das{color:var(--das)}
+.ok-badge{display:inline-block;font-size:13px;font-weight:600;color:var(--ok);margin-left:6px}
+.lt li{font-size:15px}
+.level-pill{display:inline-block;background:var(--blau);color:#fff;border-radius:999px;padding:2px 12px;font-weight:700}
+.status{font-size:14px;color:var(--muted);min-height:20px;margin-top:8px}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid var(--line);border-top-color:var(--blau);border-radius:50%;animation:sp 0.8s linear infinite;vertical-align:-2px;margin-right:6px}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+/* log */
+.tabs2{display:flex;gap:8px;margin:14px 0}
+.letter{font-size:26px;font-weight:700;color:var(--blau);margin:22px 0 6px;border-bottom:2px solid var(--blau-soft)}
+.item{display:block;width:100%;text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-s);padding:10px 14px;margin-top:6px}
+.item .meta{font-size:13px;color:var(--muted);margin-top:2px}
+.word-line{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.word-line .lemma{font-size:18px;font-weight:600}
+.count{margin-left:auto;font-size:13px;color:var(--muted)}
+.empty-state{text-align:center;padding:40px 10px;color:var(--muted)}
+table.conj{border-collapse:collapse;width:100%;font-size:15px}
+table.conj td{padding:4px 6px;border-bottom:1px solid var(--line)}
+.conj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:10px}
+.conj-grid .panel{padding:10px 12px}
+
+/* test */
+.q{font-size:22px;line-height:1.4;margin:10px 0 18px}
+.opts{display:grid;gap:10px}
+.opt{text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);padding:14px 16px;font-size:18px;min-height:52px}
+.opt.right{border-color:var(--ok);background:#E5F5EC}
+.opt.wrong{border-color:var(--bad);background:#FBE7EA}
+.bars{display:grid;gap:8px;margin-top:10px}
+.bar{display:grid;grid-template-columns:36px 1fr 40px;gap:8px;align-items:center;font-size:14px}
+.bar .track{height:10px;background:var(--line);border-radius:5px;overflow:hidden}
+.bar .fill{height:100%;background:var(--blau)}
+.bar .fill.low{background:#9AA9C9}
+.bar.bar4{grid-template-columns:36px 1fr 40px 64px}
+.bar.bar3w{grid-template-columns:96px 1fr 44px}
+.progress{height:4px;background:var(--line);border-radius:2px;margin:10px 0 0;overflow:hidden}
+.progress div{height:100%;background:var(--blau)}
+.gap{display:inline-block;min-width:70px;border-bottom:2px solid var(--blau)}
+.lv-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.lv-badge{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-weight:700;border:2px solid var(--line);color:var(--muted)}
+.lv-badge.ok{border-color:var(--ok);color:var(--ok);background:#E5F5EC}
+.lv-mini{display:inline-block;font-size:12px;font-weight:700;color:var(--blau);background:var(--blau-soft);border-radius:6px;padding:0 6px;margin-right:4px}
+.topic{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;background:var(--paper);border:1px solid var(--line);border-left-width:4px;border-radius:var(--radius-s);padding:9px 12px;margin-top:6px}
+.topic.gap{border-left-color:var(--bad)} .topic.review{border-left-color:#D9A021} .topic.solid{border-left-color:var(--ok)}
+details summary{cursor:pointer;padding:6px 0}
+.hero{text-align:left}
+.hero-num{font-size:56px;font-weight:700;line-height:1;color:var(--blau);letter-spacing:-.02em}
+.ladder{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:16px}
+.seg-track{height:12px;background:var(--line);border-radius:3px;overflow:hidden}
+.seg-l:first-child .seg-track{border-radius:6px 3px 3px 6px}.seg-l:last-child .seg-track{border-radius:3px 6px 6px 3px}
+.seg-track div{height:100%;background:var(--blau)}
+.seg-lab{display:flex;justify-content:space-between;font-size:13px;margin-top:4px;color:var(--muted)}
+.seg-lab b{color:var(--ink)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.pcard{text-align:left;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-m);padding:12px 14px}
+.pnum{font-size:28px;font-weight:700;margin-top:2px}.pnum span{font-size:15px;font-weight:500;color:var(--muted)}
+.ptrack{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:8px}.ptrack div{height:100%;background:var(--blau)}
+.bar.bar-lv{grid-template-columns:36px 1fr 104px;border:0;background:none;padding:2px 0;text-align:left;width:100%}
+.from-corr{font-size:12px;color:#8A6A12;background:#FBF1D6;border-radius:6px;padding:0 6px}
+
+#toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:15px;z-index:40;opacity:0;pointer-events:none;transition:opacity .2s;max-width:90vw;text-align:center}
+#toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div id="app">
+  <main id="main"></main>
+  <nav id="tabs" aria-label="Sections"></nav>
+</div>
+<div id="sheet" aria-modal="true" role="dialog"><div class="scrim"></div><div class="body"></div></div>
+<div id="toast" role="status"></div>
+<script>
+"use strict";
+/* ---------- small helpers ---------- */
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pad = n => String(n).padStart(2, "0");
+const ds = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const parseDs = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+const todayStr = () => ds(new Date());
+const deLong = s => new Intl.DateTimeFormat("de-DE", {weekday: "long", day: "numeric", month: "long", year: "numeric"}).format(parseDs(s));
+const deShort = s => new Intl.DateTimeFormat("de-DE", {day: "numeric", month: "short", year: "numeric"}).format(parseDs(s));
+const enLong = s => new Intl.DateTimeFormat("en-GB", {weekday: "long", day: "numeric", month: "long"}).format(parseDs(s));
+const deCompare = (a, b) => String(a).localeCompare(String(b), "de", {sensitivity: "base"});
+const letterOf = s => { const c = String(s).trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").charAt(0).toUpperCase(); return /[A-Z]/.test(c) ? c : "#"; };
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+let toastTimer;
+function toast(msg, ms = 2600) { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("show"), ms); }
+function artClass(a) { a = (a || "").toLowerCase(); return ["der", "die", "das"].includes(a) ? a : ""; }
+
+/* ---------- storage (IndexedDB key/value) ---------- */
+const STORE = "kv";
+let _db;
+function idb() {
+  if (_db) return Promise.resolve(_db);
+  return new Promise((res, rej) => {
+    const r = indexedDB.open("deutschheft", 1);
+    r.onupgradeneeded = () => r.result.createObjectStore(STORE);
+    r.onsuccess = () => { _db = r.result; res(_db); };
+    r.onerror = () => rej(r.error);
+  });
+}
+function tx(mode, fn) {
+  return idb().then(d => new Promise((res, rej) => {
+    const t = d.transaction(STORE, mode); const st = t.objectStore(STORE);
+    const req = fn(st); t.oncomplete = () => res(req && req.result); t.onerror = () => rej(t.error); t.onabort = () => rej(t.error);
+  }));
+}
+const dbGet = k => tx("readonly", st => st.get(k));
+const dbSet = (k, v) => tx("readwrite", st => st.put(v, k));
+const dbDel = k => tx("readwrite", st => st.delete(k));
+async function dbPrefix(prefix) {
+  const range = IDBKeyRange.bound(prefix, prefix + "\uffff");
+  const [keys, vals] = await Promise.all([tx("readonly", st => st.getAllKeys(range)), tx("readonly", st => st.getAll(range))]);
+  return keys.map((k, i) => [k, vals[i]]);
+}
+async function dbAll() {
+  const [keys, vals] = await Promise.all([tx("readonly", st => st.getAllKeys()), tx("readonly", st => st.getAll())]);
+  const o = {}; keys.forEach((k, i) => o[k] = vals[i]); return o;
+}
+
+/* ---------- app state ---------- */
+const DEFAULT_SETTINGS = {key: "", model: "gemini-flash-latest", lang: "English", finger: false};
+const state = {view: "journal", month: new Date(), date: null, settings: {...DEFAULT_SETTINGS}, pageIndex: {}, logTab: "sentences", logQuery: "", test: null};
+async function saveSettings() { await dbSet("settings", state.settings); }
+
+/* ---------- AI: Gemini (free tier) ---------- */
+function parseJSON(t) {
+  t = String(t).replace(/```json|```/g, "").trim();
+  try { return JSON.parse(t); } catch (e) {
+    const a = t.indexOf("{"), b = t.lastIndexOf("}");
+    if (a >= 0 && b > a) { try { return JSON.parse(t.slice(a, b + 1)); } catch (e2) {} }
+    throw new Error("The AI answer could not be read. Try again.");
+  }
+}
+let onRetry = null;
+async function gemini(parts) {
+  const s = state.settings;
+  if (!s.key) throw new Error("Add your free Gemini key in Settings to use this.");
+  const model = (s.model || "gemini-flash-latest").trim();
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(s.key.trim())}`;
+  const body = JSON.stringify({contents: [{role: "user", parts}], generationConfig: {responseMimeType: "application/json", temperature: 0.2}});
+  let r, j;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    try { r = await fetch(url, {method: "POST", headers: {"Content-Type": "application/json"}, body}); }
+    catch (e) { throw new Error("No connection to Gemini. Check your internet and try again."); }
+    j = await r.json().catch(() => ({}));
+    if (![500, 502, 503, 504].includes(r.status)) break;
+    if (attempt < 3) { if (onRetry) onRetry(attempt + 1); await sleep(2500 * (attempt + 1)); }
+  }
+  if (!r.ok) {
+    if ([500, 502, 503, 504].includes(r.status)) throw new Error("Google's free servers are busy right now. Try again in a few minutes, or change the model in Settings to gemini-flash-lite-latest, which is usually less busy.");
+    const m = j.error?.message || ("HTTP " + r.status);
+    if (r.status === 429) throw new Error("Gemini's free limit is used up for now. Wait a minute (or until tomorrow) and try again.");
+    if (r.status === 404) throw new Error(`Gemini doesn't know the model "${model}". Change the model name in Settings.`);
+    if (r.status === 400 && /key/i.test(m)) throw new Error("Gemini rejected the key. Check it in Settings.");
+    throw new Error("Gemini: " + m);
+  }
+  const text = (j.candidates?.[0]?.content?.parts || []).filter(p => !p.thought).map(p => p.text || "").join("");
+  if (!text) throw new Error("Gemini returned no answer" + (j.promptFeedback?.blockReason ? ` (${j.promptFeedback.blockReason})` : "") + ". Try again.");
+  return parseJSON(text);
+}
+
+/* ---------- LanguageTool (free, no key) ---------- */
+async function languageTool(text) {
+  const r = await fetch("https://api.languagetool.org/v2/check", {method: "POST",
+    headers: {"Content-Type": "application/x-www-form-urlencoded"}, body: new URLSearchParams({text, language: "de-DE"})});
+  if (!r.ok) throw new Error("LanguageTool is not reachable right now (" + r.status + ").");
+  const j = await r.json();
+  return (j.matches || []).map(m => ({msg: m.message, bad: text.substr(m.offset, m.length), fix: (m.replacements || []).slice(0, 3).map(x => x.value), cat: m.rule?.category?.name || ""}));
+}
+
+/* ---------- tabs ---------- */
+const ICONS = {
+  journal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="15" height="18" rx="2"/><path d="M8 8h7M8 12h7M8 16h4"/></svg>',
+  log: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5h3M5 12h3M5 19h3"/><path d="M11 5h8M11 12h8M11 19h8"/></svg>',
+  level: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 20V14M10 20V10M15 20V6M20 20V3"/></svg>',
+  settings: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>'
+};
+function renderTabs() {
+  const tabs = [["journal", "Journal"], ["log", "Log"], ["level", "Level"], ["settings", "Settings"]];
+  const nav = $("#tabs");
+  const active = state.view === "page" ? "journal" : state.view;
+  nav.classList.toggle("hidden", state.view === "page");
+  nav.innerHTML = tabs.map(([id, label]) => `<button data-tab="${id}" aria-current="${id === active}">${ICONS[id]}<span>${label}</span></button>`).join("");
+  nav.querySelectorAll("button").forEach(b => b.onclick = () => go(b.dataset.tab));
+}
+async function go(view) {
+  if (state.view === "page") await flushSave();
+  state.view = view;
+  render();
+}
+function render() {
+  renderTabs();
+  const main = $("#main");
+  main.className = state.view === "page" ? "fixed" : "";
+  main.scrollTop = 0;
+  ({journal: renderJournal, page: renderPage, log: renderLog, level: renderLevel, settings: renderSettings})[state.view]();
+}
+
+/* ---------- journal calendar ---------- */
+const isWaiting = e => !!(e && e.thumb && e.updated && (!e.saved || (e.savedAt && e.updated > e.savedAt)));
+const waitingDates = () => Object.keys(state.pageIndex).filter(d => isWaiting(state.pageIndex[d])).sort();
+function daysSince(t) { return Math.floor((Date.now() - t) / 864e5); }
+function renderJournal() {
+  const m = state.month, y = m.getFullYear(), mo = m.getMonth();
+  const first = new Date(y, mo, 1), offset = (first.getDay() + 6) % 7, days = new Date(y, mo + 1, 0).getDate();
+  const title = new Intl.DateTimeFormat("de-DE", {month: "long", year: "numeric"}).format(first);
+  const today = todayStr();
+  let cells = "";
+  for (let i = 0; i < offset; i++) cells += `<div class="day empty"></div>`;
+  for (let d = 1; d <= days; d++) {
+    const key = ds(new Date(y, mo, d)); const info = state.pageIndex[key];
+    const cls = ["day"]; if (key === today) cls.push("today"); if (key > today) cls.push("future");
+    const wait = isWaiting(info);
+    const mark = wait ? '<span class="dot wait" title="Waiting to be checked"></span>' : (info && info.saved ? '<span class="dot" title="Checked and saved to log"></span>' : "");
+    cells += `<button class="${cls.join(" ")}" data-date="${key}" aria-label="${esc(deLong(key))}${info ? (wait ? ", waiting to be checked" : ", checked") : ""}">
+      ${info && info.thumb ? `<img alt="" src="${info.thumb}">` : ""}<span class="num">${d}</span>${mark}</button>`;
+  }
+  const count = Object.keys(state.pageIndex).length;
+  const waiting = waitingDates();
+  let notes = "";
+  if (!navigator.onLine) notes += `<div class="note"><b>You're offline.</b> You can write and read your log as usual. Checking waits until you're back online.</div>`;
+  if (count && !state.backupSnoozed && (!state.lastBackup || daysSince(state.lastBackup) >= 7)) {
+    const d = state.lastBackup ? daysSince(state.lastBackup) : null;
+    notes += `<div class="note"><span>${d === null ? "You haven't saved a backup yet." : `Last backup: ${d} days ago.`} A backup in iCloud Drive keeps your journal safe.</span>
+      <div class="row" style="margin-top:8px"><button class="btn slim primary" id="bkNow">Save backup now</button><button class="btn slim" id="bkLater">Later</button></div></div>`;
+  }
+  if (waiting.length) {
+    notes += `<div class="note"><b>${waiting.length} page${waiting.length > 1 ? "s" : ""} waiting to be checked</b>
+      <div class="chips">${waiting.map(d => `<button class="chip" data-open="${d}">${esc(deShort(d))}</button>`).join("")}</div>
+      <div class="row" style="margin-top:10px"><button class="btn slim primary" id="checkAll" ${navigator.onLine && state.settings.key ? "" : "disabled"}>Check all waiting pages</button>
+      ${!state.settings.key ? '<span class="small muted">Add your Gemini key in Settings first.</span>' : (!navigator.onLine ? '<span class="small muted">Available when you\'re online.</span>' : "")}</div></div>`;
+  }
+  $("#main").innerHTML = `<div class="wrap">
+    <div class="cal-head"><h1>${esc(title)}</h1>
+      <button class="iconbtn" id="prevM" aria-label="Previous month">‹</button>
+      <button class="iconbtn" id="nextM" aria-label="Next month">›</button></div>
+    ${notes}
+    <div class="weekdays">${["Mo","Di","Mi","Do","Fr","Sa","So"].map(w => `<div>${w}</div>`).join("")}</div>
+    <div class="grid">${cells}</div>
+    <div class="cal-foot"><button class="btn primary" id="writeToday">Write today's page</button>
+      <span class="muted small">${count ? `${count} page${count > 1 ? "s" : ""} written. <span class="dot-inline wait"></span> waiting to be checked · <span class="dot-inline"></span> checked and saved to your log.` : "Tap any day to open its page."}</span></div>
+  </div>`;
+  $("#prevM").onclick = () => { state.month = new Date(y, mo - 1, 1); renderJournal(); };
+  $("#nextM").onclick = () => { state.month = new Date(y, mo + 1, 1); renderJournal(); };
+  $("#writeToday").onclick = () => openPage(today);
+  document.querySelectorAll(".day[data-date]").forEach(b => b.onclick = () => openPage(b.dataset.date));
+  document.querySelectorAll("[data-open]").forEach(b => b.onclick = () => openPage(b.dataset.open));
+  const bn = $("#bkNow"); if (bn) bn.onclick = async () => { bn.disabled = true; const ok = await doBackup(); if (ok) toast("Backup saved"); renderJournal(); };
+  const bl = $("#bkLater"); if (bl) bl.onclick = () => { state.backupSnoozed = true; renderJournal(); };
+  const ca = $("#checkAll"); if (ca) ca.onclick = () => checkAllWaiting();
+}
+window.addEventListener("online", () => { if (state.view === "journal") renderJournal(); });
+window.addEventListener("offline", () => { if (state.view === "journal") renderJournal(); });
+
+/* ---------- handwriting page editor ---------- */
+const PAGE_W = 1000, LINE = 46, TOP = 96, MARGIN_X = 88, MIN_H = 1400, MAX_H = 7000;
+const PEN_COLORS = [["#2340B0", "Königsblau"], ["#1B1B1F", "Black"], ["#C62F45", "Red"], ["#1F8A55", "Green"]];
+const HL_COLOR = "#FFD84A";
+const SIZES = [2.2, 3.4, 5];
+const Ed = {date: null, strokes: [], height: MIN_H, undo: [], redo: [], tool: "pen", color: PEN_COLORS[0][0], size: SIZES[1],
+  paper: null, live: null, scale: 1, dpr: 1, drawing: null, touchScroll: null, saveTimer: null, dirty: false, thumbDirty: false, lastPen: 0, raf: 0};
+
+async function openPage(date) {
+  if (state.view === "page") await flushSave();
+  const p = (await dbGet("page:" + date)) || {strokes: [], height: MIN_H};
+  Object.assign(Ed, {date, strokes: p.strokes || [], height: p.height || MIN_H, undo: [], redo: [], drawing: null, dirty: false});
+  state.date = date; state.view = "page"; render();
+}
+function shiftDay(n) { const d = parseDs(Ed.date); d.setDate(d.getDate() + n); openPage(ds(d)); }
+
+function renderPage() {
+  const d = Ed.date;
+  $("#main").innerHTML = `
+    <div class="pg-head">
+      <button class="btn slim" id="back">‹ Calendar</button>
+      <button class="iconbtn" id="prevD" aria-label="Previous day">‹</button>
+      <div class="title">${esc(deLong(d))}<small>${esc(enLong(d))}</small></div>
+      <button class="iconbtn" id="nextD" aria-label="Next day">›</button>
+      <button class="btn primary slim" id="check">Check page</button>
+    </div>
+    <div class="toolbar" role="toolbar" aria-label="Writing tools">
+      <div class="seg" id="tools">
+        <button data-tool="pen" aria-pressed="${Ed.tool === "pen"}">Pen</button>
+        <button data-tool="hl" aria-pressed="${Ed.tool === "hl"}">Marker</button>
+        <button data-tool="eraser" aria-pressed="${Ed.tool === "eraser"}">Eraser</button>
+      </div>
+      <span id="colors" class="row" style="gap:6px">${PEN_COLORS.map(([c, n]) => `<button class="swatch" data-color="${c}" style="background:${c}" aria-label="${n}" aria-pressed="${Ed.color === c}"></button>`).join("")}</span>
+      <span id="sizes" class="row" style="gap:6px">${SIZES.map((s, i) => `<button class="size" data-size="${s}" aria-label="${["Fine", "Medium", "Thick"][i]}" aria-pressed="${Ed.size === s}"><i style="width:${4 + i * 4}px;height:${4 + i * 4}px"></i></button>`).join("")}</span>
+      <span class="spacer"></span>
+      <button class="btn slim" id="undo">Undo</button>
+      <button class="btn slim" id="redo">Redo</button>
+    </div>
+    <div class="scroller" id="scroller">
+      <div class="sheetwrap" id="sheetwrap"><canvas id="paper"></canvas><canvas id="live"></canvas></div>
+      <button class="btn slim extend" id="extend">Add more lines</button>
+    </div>`;
+  $("#back").onclick = () => go("journal");
+  $("#prevD").onclick = () => shiftDay(-1);
+  $("#nextD").onclick = () => shiftDay(1);
+  $("#check").onclick = () => openCheck();
+  $("#tools").onclick = e => { const b = e.target.closest("button"); if (!b) return; Ed.tool = b.dataset.tool; syncToolbar(); };
+  $("#colors").onclick = e => { const b = e.target.closest("button"); if (!b) return; Ed.color = b.dataset.color; if (Ed.tool !== "pen") Ed.tool = "pen"; syncToolbar(); };
+  $("#sizes").onclick = e => { const b = e.target.closest("button"); if (!b) return; Ed.size = Number(b.dataset.size); if (Ed.tool === "eraser") Ed.tool = "pen"; syncToolbar(); };
+  $("#undo").onclick = () => undoRedo(Ed.undo, Ed.redo);
+  $("#redo").onclick = () => undoRedo(Ed.redo, Ed.undo);
+  $("#extend").onclick = () => { if (Ed.height >= MAX_H) return toast("This page is as long as it can be."); Ed.height = Math.min(MAX_H, Ed.height + 700); layoutCanvas(); scheduleSave(); setTimeout(() => $("#scroller").scrollBy({top: 400, behavior: "smooth"}), 50); };
+  Ed.paper = $("#paper"); Ed.live = $("#live");
+  const lv = Ed.live;
+  lv.addEventListener("pointerdown", onDown);
+  lv.addEventListener("pointermove", onMove);
+  lv.addEventListener("pointerup", onUp);
+  lv.addEventListener("pointercancel", onUp);
+  // iPadOS waits to see if a pencil touch is Scribble or a gesture before passing it on.
+  // Cancelling the native touch events removes that pause between strokes.
+  const stop = e => { if (e.cancelable) e.preventDefault(); };
+  for (const t of ["touchstart", "touchmove", "touchend"]) lv.addEventListener(t, stop, {passive: false});
+  lv.addEventListener("contextmenu", e => e.preventDefault());
+  layoutCanvas(); syncToolbar();
+}
+function syncToolbar() {
+  document.querySelectorAll("#tools button").forEach(b => b.setAttribute("aria-pressed", b.dataset.tool === Ed.tool));
+  document.querySelectorAll("#colors button").forEach(b => b.setAttribute("aria-pressed", Ed.tool === "pen" && b.dataset.color === Ed.color));
+  document.querySelectorAll("#sizes button").forEach(b => b.setAttribute("aria-pressed", Ed.tool === "pen" && Number(b.dataset.size) === Ed.size));
+  const u = $("#undo"), r = $("#redo"); if (u) u.disabled = !Ed.undo.length; if (r) r.disabled = !Ed.redo.length;
+}
+function layoutCanvas() {
+  const p = Ed.paper, lv = Ed.live; if (!p) return;
+  const w = p.parentElement.clientWidth; if (!w) return;
+  Ed.scale = w / PAGE_W;
+  const h = Ed.height * Ed.scale;
+  let dpr = Math.min(window.devicePixelRatio || 1, 2);
+  dpr = Math.min(dpr, Math.sqrt(15e6 / (w * h)));
+  Ed.dpr = dpr;
+  for (const c of [p, lv]) { c.style.width = w + "px"; c.style.height = h + "px"; c.width = Math.round(w * dpr); c.height = Math.round(h * dpr); }
+  redraw();
+}
+function setT(ctx) { ctx.setTransform(Ed.dpr * Ed.scale, 0, 0, Ed.dpr * Ed.scale, 0, 0); }
+function drawRuling(ctx, height, faint) {
+  ctx.fillStyle = "#FDFEFF"; ctx.fillRect(0, 0, PAGE_W, height);
+  ctx.lineWidth = 1.3; ctx.strokeStyle = faint ? "#DCE6F4" : "#BCD0EC";
+  ctx.beginPath(); for (let y = TOP; y < height - 10; y += LINE) { ctx.moveTo(0, y); ctx.lineTo(PAGE_W, y); } ctx.stroke();
+  ctx.strokeStyle = faint ? "#F2C4C4" : "#E07070"; ctx.lineWidth = 1.6;
+  ctx.beginPath(); ctx.moveTo(MARGIN_X, 0); ctx.lineTo(MARGIN_X, height); ctx.stroke();
+}
+function redraw() {
+  const ctx = Ed.paper.getContext("2d"); setT(ctx);
+  drawRuling(ctx, Ed.height);
+  for (const s of Ed.strokes) drawStroke(ctx, s);
+  const l = Ed.live.getContext("2d"); l.setTransform(1, 0, 0, 1, 0, 0); l.clearRect(0, 0, Ed.live.width, Ed.live.height);
+  syncToolbar();
+}
+const mid = (a, b) => [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+const wOf = (s, pr) => s.w * (0.5 + 0.95 * (pr || 0.5));
+function drawStroke(ctx, s) {
+  const p = s.p; if (!p || !p.length) return;
+  ctx.save(); ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.strokeStyle = s.c; ctx.fillStyle = s.c;
+  if (s.t === "hl") { ctx.globalAlpha = 0.38; ctx.globalCompositeOperation = "multiply"; ctx.lineCap = "butt"; }
+  if (p.length === 1) { ctx.beginPath(); ctx.arc(p[0][0], p[0][1], (s.t === "hl" ? s.w : wOf(s, p[0][2])) / 2, 0, Math.PI * 2); ctx.fill(); ctx.restore(); return; }
+  if (s.t === "hl") {
+    ctx.lineWidth = s.w; ctx.beginPath(); ctx.moveTo(p[0][0], p[0][1]);
+    for (let i = 1; i < p.length - 1; i++) { const m = mid(p[i], p[i + 1]); ctx.quadraticCurveTo(p[i][0], p[i][1], m[0], m[1]); }
+    const l = p[p.length - 1]; ctx.lineTo(l[0], l[1]); ctx.stroke(); ctx.restore(); return;
+  }
+  for (let i = 1; i < p.length; i++) {
+    const a = p[i - 1], b = p[i], start = i >= 2 ? mid(p[i - 2], a) : a, end = mid(a, b);
+    ctx.lineWidth = wOf(s, (a[2] + b[2]) / 2);
+    ctx.beginPath(); ctx.moveTo(start[0], start[1]); ctx.quadraticCurveTo(a[0], a[1], end[0], end[1]); ctx.stroke();
+  }
+  const n = p.length, e0 = mid(p[n - 2], p[n - 1]);
+  ctx.lineWidth = wOf(s, p[n - 1][2]); ctx.beginPath(); ctx.moveTo(e0[0], e0[1]); ctx.lineTo(p[n - 1][0], p[n - 1][1]); ctx.stroke();
+  ctx.restore();
+}
+function toPage(e) {
+  const r = Ed.live.getBoundingClientRect();
+  let pr = e.pointerType === "pen" ? e.pressure : 0.5; if (!pr) pr = 0.5;
+  return [Math.round((e.clientX - r.left) / Ed.scale * 10) / 10, Math.round((e.clientY - r.top) / Ed.scale * 10) / 10, Math.round(pr * 100) / 100];
+}
+const penRecently = () => Date.now() - Ed.lastPen < 1500;
+function canDraw(e) { return e.pointerType === "pen" || e.pointerType === "mouse" || (e.pointerType === "touch" && state.settings.finger && Date.now() - Ed.lastPen > 4000); }
+function onDown(e) {
+  if (!canDraw(e)) {
+    // a palm is a large touch, or a touch while the pencil is writing: ignore it
+    if (e.pointerType === "touch" && !Ed.drawing && !penRecently() && (e.width || 0) < 45) Ed.touchScroll = {id: e.pointerId, y: e.clientY, top: $("#scroller").scrollTop};
+    return;
+  }
+  if (Ed.drawing) return;
+  e.preventDefault(); Ed.touchScroll = null; if (e.pointerType === "pen") Ed.lastPen = Date.now();
+  try { Ed.live.setPointerCapture(e.pointerId); } catch (_) {}
+  const pt = toPage(e);
+  if (Ed.tool === "eraser") { Ed.drawing = {id: e.pointerId, eraser: true, before: Ed.strokes.slice(), changed: false}; eraseAt(pt); return; }
+  const hl = Ed.tool === "hl";
+  Ed.drawing = {id: e.pointerId, s: {t: hl ? "hl" : "pen", c: hl ? HL_COLOR : Ed.color, w: hl ? 24 : Ed.size, p: [pt]}};
+  paintLive();
+}
+function onMove(e) {
+  if (Ed.touchScroll && e.pointerId === Ed.touchScroll.id) { if (penRecently()) { Ed.touchScroll = null; return; } $("#scroller").scrollTop = Ed.touchScroll.top - (e.clientY - Ed.touchScroll.y); return; }
+  const d = Ed.drawing; if (!d || e.pointerId !== d.id) return;
+  e.preventDefault(); if (e.pointerType === "pen") Ed.lastPen = Date.now();
+  const evs = (e.getCoalescedEvents && e.getCoalescedEvents()) || []; const list = evs.length ? evs : [e];
+  for (const ev of list) {
+    const pt = toPage(ev);
+    if (d.eraser) eraseAt(pt);
+    else { const l = d.s.p[d.s.p.length - 1]; if (Math.hypot(pt[0] - l[0], pt[1] - l[1]) > 0.7) d.s.p.push(pt); }
+  }
+  if (!d.eraser) paintLive();
+}
+function onUp(e) {
+  if (Ed.touchScroll && e.pointerId === Ed.touchScroll.id) { Ed.touchScroll = null; return; }
+  const d = Ed.drawing; if (!d || e.pointerId !== d.id) return;
+  Ed.drawing = null; if (e.pointerType === "pen") Ed.lastPen = Date.now();
+  if (d.eraser) { if (d.changed) { pushUndo(d.before); scheduleSave(); } return; }
+  pushUndo(Ed.strokes.slice());
+  Ed.strokes.push(d.s);
+  const l = Ed.live.getContext("2d"); l.setTransform(1, 0, 0, 1, 0, 0); l.clearRect(0, 0, Ed.live.width, Ed.live.height);
+  const ctx = Ed.paper.getContext("2d"); setT(ctx); drawStroke(ctx, d.s);
+  const maxY = Math.max(...d.s.p.map(q => q[1]));
+  if (maxY > Ed.height - 140 && Ed.height < MAX_H) { Ed.height = Math.min(MAX_H, Ed.height + 700); layoutCanvas(); }
+  syncToolbar(); scheduleSave();
+}
+function paintLive() {
+  if (Ed.raf) return;
+  Ed.raf = requestAnimationFrame(() => {
+    Ed.raf = 0; const d = Ed.drawing; if (!d || d.eraser) return;
+    const l = Ed.live.getContext("2d"); l.setTransform(1, 0, 0, 1, 0, 0); l.clearRect(0, 0, Ed.live.width, Ed.live.height);
+    setT(l); drawStroke(l, d.s);
+  });
+}
+function eraseAt(pt) {
+  const r = 14, r2 = r * r; const d = Ed.drawing;
+  const hit = s => { const p = s.p; for (let i = 0; i < p.length; i++) {
+      const dx = p[i][0] - pt[0], dy = p[i][1] - pt[1]; if (dx * dx + dy * dy < r2) return true;
+      if (i) { const m = mid(p[i - 1], p[i]); const mx = m[0] - pt[0], my = m[1] - pt[1]; if (mx * mx + my * my < r2) return true; } }
+    return false; };
+  const kept = Ed.strokes.filter(s => !hit(s));
+  if (kept.length !== Ed.strokes.length) { Ed.strokes = kept; d.changed = true; redraw(); }
+}
+function pushUndo(snap) { Ed.undo.push(snap); if (Ed.undo.length > 80) Ed.undo.shift(); Ed.redo = []; }
+function undoRedo(from, to) { if (!from.length) return; to.push(Ed.strokes.slice()); Ed.strokes = from.pop(); redraw(); scheduleSave(); }
+
+function scheduleSave() { Ed.dirty = true; Ed.thumbDirty = true; clearTimeout(Ed.saveTimer); Ed.saveTimer = setTimeout(() => flushSave(false), 2500); }
+async function flushSave(force = true) {
+  clearTimeout(Ed.saveTimer); if (!Ed.date) return;
+  if (!force && (Ed.drawing || penRecently())) { Ed.saveTimer = setTimeout(() => flushSave(false), 1500); return; }
+  const needThumb = force && Ed.thumbDirty;
+  if (!Ed.dirty && !needThumb) return;
+  Ed.dirty = false; if (needThumb) Ed.thumbDirty = false;
+  const date = Ed.date;
+  try {
+    if (!Ed.strokes.length) {
+      await dbDel("page:" + date);
+      if (state.pageIndex[date]) { const keep = state.pageIndex[date].saved; if (keep) state.pageIndex[date].thumb = ""; else delete state.pageIndex[date]; }
+    } else {
+      await dbSet("page:" + date, {strokes: Ed.strokes, height: Ed.height, updated: Date.now()});
+      const entry = {...(state.pageIndex[date] || {}), updated: Date.now()};
+      if (needThumb || !entry.thumb) entry.thumb = makeThumb(Ed.strokes);
+      state.pageIndex[date] = entry;
+    }
+    await dbSet("pageIndex", state.pageIndex);
+  } catch (e) { toast("Could not save this page: " + e.message, 5000); }
+}
+function makeThumb(strokes) {
+  const W = 180, H = 240, s = W / PAGE_W; const c = document.createElement("canvas"); c.width = W; c.height = H;
+  const ctx = c.getContext("2d"); ctx.setTransform(s, 0, 0, s, 0, 0); drawRuling(ctx, H / s, true);
+  for (const st of strokes) drawStroke(ctx, {...st, w: st.t === "hl" ? st.w : Math.max(st.w * 1.8, 4)});
+  return c.toDataURL("image/jpeg", 0.72);
+}
+function pageImageBase64(strokes) {
+  if (!strokes.length) return null;
+  let minY = Infinity, maxY = 0; for (const s of strokes) for (const q of s.p) { if (q[1] < minY) minY = q[1]; if (q[1] > maxY) maxY = q[1]; }
+  minY = Math.max(0, minY - 30); maxY = maxY + 30;
+  let sc = 1.4; const hUnits = maxY - minY; if (hUnits * sc > 7000) sc = 7000 / hUnits;
+  const c = document.createElement("canvas"); c.width = Math.round(PAGE_W * sc); c.height = Math.round(hUnits * sc);
+  const ctx = c.getContext("2d"); ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, c.width, c.height);
+  ctx.setTransform(sc, 0, 0, sc, 0, -minY * sc);
+  for (const s of strokes) drawStroke(ctx, s.t === "hl" ? s : {...s, c: "#111"});
+  return c.toDataURL("image/png").split(",")[1];
+}
+window.addEventListener("resize", () => { if (state.view === "page") layoutCanvas(); });
+document.addEventListener("visibilitychange", () => { if (document.hidden) flushSave(); });
+window.addEventListener("pagehide", () => flushSave());
+
+/* ---------- bottom sheet ---------- */
+function openSheet(title, html, onClose) {
+  const sh = $("#sheet"); const body = sh.querySelector(".body");
+  body.innerHTML = `<div class="sheet-head"><h3>${esc(title)}</h3><button class="btn slim" id="closeSheet">Close</button></div><div class="sheet-content">${html}</div>`;
+  sh.classList.add("open");
+  const close = () => { sh.classList.remove("open"); body.innerHTML = ""; if (onClose) onClose(); };
+  $("#closeSheet").onclick = close; sh.querySelector(".scrim").onclick = close;
+  return body.querySelector(".sheet-content");
+}
+function closeSheet() { const b = $("#closeSheet"); if (b) b.click(); }
+
+/* ---------- word diff (original vs corrected) ---------- */
+function diffWords(a, b) {
+  const A = String(a).split(/\s+/).filter(Boolean), B = String(b).split(/\s+/).filter(Boolean), n = A.length, m = B.length;
+  const dp = Array.from({length: n + 1}, () => new Array(m + 1).fill(0));
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--) dp[i][j] = A[i] === B[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+  const oa = [], ob = []; let i = 0, j = 0;
+  while (i < n && j < m) { if (A[i] === B[j]) { oa.push([A[i++], 0]); ob.push([B[j++], 0]); } else if (dp[i + 1][j] >= dp[i][j + 1]) oa.push([A[i++], 1]); else ob.push([B[j++], 1]); }
+  while (i < n) oa.push([A[i++], 1]); while (j < m) ob.push([B[j++], 1]);
+  const fmt = (arr, tag) => arr.map(([w, c]) => c ? `<${tag}>${esc(w)}</${tag}>` : esc(w)).join(" ");
+  return [fmt(oa, "del"), fmt(ob, "ins")];
+}
+
+/* ---------- prompts ---------- */
+const P_TRANSCRIBE = `You are reading one handwritten page from a German learner's journal.
+Transcribe exactly what is written, keeping all of the learner's mistakes (do not correct spelling, grammar, capitalisation or umlauts).
+Put each sentence on its own line. Ignore crossed-out words, doodles and the ruled lines. Write [?] for a word you cannot read.
+Return only JSON: {"text": "..."}`;
+function pAnalyse(text, lt) {
+  const L = state.settings.lang || "English";
+  const hints = lt && lt.length ? `\nA grammar checker flagged these spots (it can be wrong):\n${lt.slice(0, 25).map(m => `- "${m.bad}": ${m.msg}${m.fix.length ? " (suggests: " + m.fix.join(", ") + ")" : ""}`).join("\n")}\n` : "";
+  return `You are a patient, precise German teacher. A learner wrote the text below in their German journal. Write every explanation and translation in ${L}.
+Split the text into sentences. For each sentence give:
+- "original": the sentence exactly as written
+- "corrected": correct, natural German with the same meaning (identical to "original" if it is already correct)
+- "translation": the meaning in ${L}
+- "mistakes": a list of {"wrong": "...", "right": "...", "explanation": "..."}; the explanation names the rule (case, gender, ending, verb position, conjugation, spelling...) in one or two short sentences. Empty list if correct.
+- "grammar": one or two sentences explaining how the corrected sentence is built (tense, which cases appear and why, word order)
+- "words": every word of the corrected sentence except articles, personal pronouns, numbers and names, each as {"form": the word as it appears, "lemma": dictionary form (infinitive for verbs including separable prefix, nominative singular for nouns, base form for adjectives), "pos": one of "Nomen","Verb","Adjektiv","Adverb","Präposition","Konjunktion","Pronomen","Partikel","Andere", "article": "der","die","das" or null (nouns only), "plural": plural for nouns or null, "translation": short meaning in ${L}, "note": the grammatical form here, for example "Präteritum, 3. Person Singular" or "Dativ Plural", "cefr": the CEFR level at which learners usually learn this word according to the Goethe-Institut word lists ("A1" to "C2")}
+Also give "level": the CEFR level this writing shows (A1, A2, B1, B2, C1 or C2) and "feedback": two or three encouraging sentences in ${L} naming the single most useful thing to practise next.
+${hints}
+Return only JSON: {"sentences":[...],"level":"...","feedback":"..."}
+
+Text:
+"""
+${text}
+"""`;
+}
+
+/* ---------- check a page ---------- */
+async function openCheck() {
+  await flushSave();
+  const date = Ed.date;
+  const a = (await dbGet("ana:" + date)) || {text: "", result: null, lt: null};
+  const hasKey = !!state.settings.key;
+  const box = openSheet("Check " + deShort(date), `
+    <p class="small muted">${hasKey ? "The AI reads your handwriting into the box below. Fix any word it misread, then check again." : "Add your free Gemini key in Settings so the app can read your handwriting. Until then, you can Scribble or type your sentences into the box and LanguageTool will check them."}</p>
+    <div class="row">${hasKey ? `<button class="btn primary" id="readCheck">Read handwriting and check</button>` : ""}
+      <button class="btn${hasKey ? "" : " primary"}" id="checkText">Check text</button></div>
+    <label class="field" for="pageText">Text of this page</label>
+    <textarea id="pageText" placeholder="Heute bin ich in die Stadt gegangen…" autocapitalize="sentences" spellcheck="false">${esc(a.text)}</textarea>
+    <div class="status" id="status"></div>
+    <div id="results"></div>`);
+  const ta = $("#pageText", box), status = $("#status", box), results = $("#results", box);
+  if (!navigator.onLine) { box.querySelectorAll(".row .btn").forEach(b => b.disabled = true); status.textContent = "You're offline. This page will wait in the “to check” list on the calendar until you're back online."; }
+  const busy = (msg) => { status.innerHTML = msg ? `<span class="spin"></span>${esc(msg)}` : ""; box.querySelectorAll(".row .btn").forEach(b => b.disabled = !!msg); };
+  onRetry = n => { status.innerHTML = `<span class="spin"></span>Google is busy, trying again (${n} of 3)…`; };
+  const show = () => { results.innerHTML = renderResults(a, date); const sv = $("#saveLog", results); if (sv) sv.onclick = () => saveToLog(date, a, sv); };
+  show();
+
+  async function check() {
+    const text = ta.value.trim(); a.text = text;
+    if (!text) { status.textContent = "Write or Scribble your sentences into the box first."; return; }
+    busy("Checking with LanguageTool…");
+    try { a.lt = await languageTool(text); } catch (e) { a.lt = null; a.ltError = e.message; }
+    if (state.settings.key) {
+      busy("Your teacher is reading the sentences…");
+      try { a.result = await gemini([{text: pAnalyse(text, a.lt)}]); a.error = ""; }
+      catch (e) { a.error = e.message; }
+    } else a.result = null;
+    a.checkedText = text; a.checkedAt = Date.now();
+    await dbSet("ana:" + date, a); busy(""); show();
+  }
+  const rc = $("#readCheck", box);
+  if (rc) rc.onclick = async () => {
+    const img = pageImageBase64(Ed.strokes);
+    if (!img) { status.textContent = "This page is still empty. Write something with your pencil first."; return; }
+    busy("Reading your handwriting…");
+    try { const r = await gemini([{text: P_TRANSCRIBE}, {inline_data: {mime_type: "image/png", data: img}}]); ta.value = (r.text || "").trim(); }
+    catch (e) { busy(""); status.textContent = e.message; return; }
+    await check();
+  };
+  $("#checkText", box).onclick = check;
+  ta.addEventListener("input", () => { a.text = ta.value; });
+}
+function renderResults(a, date) {
+  if (!a.checkedAt) return "";
+  let h = "";
+  if (a.error) h += `<div class="panel" style="border-color:var(--bad)"><b>The AI check didn't work.</b> ${esc(a.error)}</div>`;
+  const r = a.result;
+  if (r && Array.isArray(r.sentences)) {
+    if (r.level || r.feedback) h += `<div class="panel" style="margin-top:12px">${r.level ? `<p>This page reads like <span class="level-pill">${esc(r.level)}</span></p>` : ""}${r.feedback ? `<p class="small" style="margin:0">${esc(r.feedback)}</p>` : ""}</div>`;
+    for (const s of r.sentences) {
+      const same = (s.original || "").trim() === (s.corrected || "").trim();
+      const [o, c] = diffWords(s.original || "", s.corrected || "");
+      h += `<div class="sent">
+        <div class="de">${same ? esc(s.corrected) + '<span class="ok-badge">✓ correct</span>' : c}</div>
+        ${same ? "" : `<div class="orig">You wrote: ${o}</div>`}
+        ${s.translation ? `<div class="tr">${esc(s.translation)}</div>` : ""}
+        ${(s.mistakes || []).length ? `<ul class="mist">${s.mistakes.map(m => `<li><del>${esc(m.wrong)}</del> → <ins>${esc(m.right)}</ins><br>${esc(m.explanation)}</li>`).join("")}</ul>` : ""}
+        ${s.grammar ? `<div class="gram">${esc(s.grammar)}</div>` : ""}
+        ${(s.words || []).length ? `<div class="chips">${s.words.map(w => `<span class="chip" title="${esc(w.note || "")}">${w.article ? `<span class="art ${artClass(w.article)}">${esc(w.article)}</span> ` : ""}${esc(w.lemma)}${w.translation ? ` <span class="muted">· ${esc(w.translation)}</span>` : ""}</span>`).join("")}</div>` : ""}
+      </div>`;
+    }
+  }
+  if (a.lt && a.lt.length) {
+    h += `<div class="panel" style="margin-top:12px"><h3>LanguageTool also noticed</h3><ul class="lt" style="padding-left:18px;margin:6px 0 0">${a.lt.map(m => `<li><b>${esc(m.bad)}</b>: ${esc(m.msg)}${m.fix.length ? ` <span class="muted">(${m.fix.map(esc).join(", ")})</span>` : ""}</li>`).join("")}</ul></div>`;
+  } else if (a.lt && !r) h += `<div class="panel" style="margin-top:12px">LanguageTool found no mistakes.</div>`;
+  if (a.ltError) h += `<p class="small muted" style="margin-top:10px">${esc(a.ltError)}</p>`;
+  h += `<p class="small muted" style="margin-top:12px">Grammar checks by <a href="https://languagetool.org" target="_blank" rel="noopener">LanguageTool</a>${state.settings.key ? " and Google Gemini" : ""}.</p>`;
+  const saved = state.pageIndex[date] && state.pageIndex[date].saved;
+  h += `<div class="row" style="margin-top:6px"><button class="btn primary" id="saveLog">${saved ? "Update my log" : "Save to my log"}</button>${saved ? '<span class="small muted">Saving again replaces this day\'s entries.</span>' : ""}</div>`;
+  return h;
+}
+function naiveSentences(text) {
+  return text.split(/(?<=[.!?])\s+|\n+/).map(s => s.trim()).filter(Boolean).map(s => ({original: s, corrected: s, translation: "", mistakes: [], grammar: "",
+    words: s.replace(/[.,!?;:„“"()«»]/g, " ").split(/\s+/).filter(w => w.length > 1 && !/^\d+$/.test(w)).map(w => ({form: w, lemma: /^[A-ZÄÖÜ]/.test(w) && s.indexOf(w) > 0 ? w : w.toLowerCase(), pos: "", article: null, translation: "", note: ""}))}));
+}
+async function saveLogEntry(date, a) {
+  const sentences = (a.result && Array.isArray(a.result.sentences) ? a.result.sentences : naiveSentences(a.checkedText || a.text || ""))
+    .map((s, i) => ({...s, id: date + "#" + i}));
+  if (!sentences.length) return [];
+  const now = Date.now();
+  await dbSet("log:" + date, {date, sentences, level: a.result?.level || null, savedAt: now});
+  state.pageIndex[date] = {...(state.pageIndex[date] || {}), saved: true, savedAt: now};
+  await dbSet("pageIndex", state.pageIndex);
+  return sentences;
+}
+async function saveToLog(date, a, btn) {
+  const sentences = await saveLogEntry(date, a);
+  if (!sentences.length) return toast("There is nothing to save yet.");
+  btn.textContent = "Saved ✓"; btn.disabled = true;
+  toast(`${sentences.length} sentence${sentences.length > 1 ? "s" : ""} saved to your log`);
+}
+
+/* ---------- check all waiting pages ---------- */
+async function checkOnePage(date, say) {
+  const p = await dbGet("page:" + date);
+  const img = p && pageImageBase64(p.strokes || []);
+  if (!img) throw new Error("This page is empty.");
+  say("Reading handwriting…");
+  const tr = await gemini([{text: P_TRANSCRIBE}, {inline_data: {mime_type: "image/png", data: img}}]);
+  const text = (tr.text || "").trim();
+  if (!text) throw new Error("No text could be read on this page.");
+  const a = {text, checkedText: text, lt: null};
+  say("Checking grammar…");
+  try { a.lt = await languageTool(text); } catch (e) { a.ltError = e.message; }
+  a.result = await gemini([{text: pAnalyse(text, a.lt)}]);
+  a.checkedAt = Date.now();
+  await dbSet("ana:" + date, a);
+  const sentences = await saveLogEntry(date, a);
+  return {n: sentences.length, level: a.result?.level, mistakes: (a.result?.sentences || []).reduce((k, s) => k + (s.mistakes || []).length, 0)};
+}
+async function checkAllWaiting() {
+  if (!navigator.onLine) return toast("You're offline. Try again when you're connected.");
+  if (!state.settings.key) return toast("Add your Gemini key in Settings first.");
+  const dates = waitingDates(); if (!dates.length) return;
+  const run = {cancel: false};
+  const box = openSheet("Checking " + dates.length + " page" + (dates.length > 1 ? "s" : ""), `
+    <p class="small muted">Keep the app open while this runs. Each page is read, corrected and saved to your log. Tap a page afterwards to see its corrections.</p>
+    <div id="batch">${dates.map(d => `<button class="item" data-d="${d}" disabled><b>${esc(deLong(d))}</b><div class="meta" id="b-${d}">Waiting</div></button>`).join("")}</div>
+    <div class="status" id="bStatus"></div>`, () => { run.cancel = true; onRetry = null; if (state.view === "journal") renderJournal(); });
+  const bStatus = $("#bStatus", box);
+  let done = 0;
+  for (let i = 0; i < dates.length; i++) {
+    if (run.cancel) return;
+    const d = dates[i], line = $("#b-" + d, box), item = line.parentElement;
+    const say = t => { line.innerHTML = `<span class="spin"></span>${esc(t)}`; };
+    onRetry = n => say(`Google is busy, trying again (${n} of 3)…`);
+    try {
+      const r = await checkOnePage(d, say);
+      done++;
+      line.textContent = `✓ ${r.n} sentence${r.n === 1 ? "" : "s"} saved · ${r.mistakes} mistake${r.mistakes === 1 ? "" : "s"} to look at${r.level ? " · " + r.level : ""}`;
+      item.disabled = false; item.onclick = async () => { closeSheet(); await openPage(d); openCheck(); };
+    } catch (e) {
+      line.textContent = "✗ " + e.message;
+      if (/free limit|busy|offline|connection/i.test(e.message)) { bStatus.textContent = "Stopped. The pages that are done are saved; the others are still waiting."; break; }
+    }
+    if (i < dates.length - 1 && !run.cancel) await sleep(3000);
+  }
+  onRetry = null;
+  if (!run.cancel && !bStatus.textContent) bStatus.textContent = `Finished: ${done} of ${dates.length} page${dates.length > 1 ? "s" : ""} checked.`;
+}
+
+/* ---------- log ---------- */
+async function loadLogs() { return (await dbPrefix("log:")).map(([, v]) => v).filter(Boolean); }
+const normSentence = t => String(t || "").toLowerCase().replace(/[„“"«»]/g, "").replace(/\s+/g, " ").replace(/[\s.!?…]+$/, "").trim();
+const posKey = p => { p = String(p || "").toLowerCase(); return /verb/.test(p) && !/adverb/.test(p) ? "verb" : p; };
+function groupSentences(sentences) {
+  const map = new Map();
+  for (const s of sentences) {
+    const k = normSentence(s.corrected); if (!k) continue;
+    let g = map.get(k);
+    if (!g) { g = {key: k, corrected: s.corrected, translation: s.translation || "", dates: new Set(), wrong: new Map()}; map.set(k, g); }
+    g.dates.add(s.date); if (!g.translation && s.translation) g.translation = s.translation;
+    if ((s.original || "").trim() !== (s.corrected || "").trim() && !g.wrong.has(s.original)) g.wrong.set(s.original, s.corrected);
+  }
+  return [...map.values()].map(g => ({...g, dates: [...g.dates].sort()}));
+}
+function buildWords(logs) {
+  const map = new Map();
+  for (const log of logs) for (const s of log.sentences || []) {
+   const own = new Set(String(s.original || "").toLowerCase().split(/[^\p{L}ß]+/u).filter(Boolean));
+   for (const w of s.words || []) {
+    const lemma = String(w.lemma || "").trim(); if (!lemma) continue;
+    const key = lemma.toLowerCase() + "|" + posKey(w.pos);
+    let e = map.get(key);
+    if (!e) { e = {key, lemma, pos: w.pos || "", article: w.article || null, plural: w.plural || null, translation: w.translation || "", forms: new Map(), refs: []}; map.set(key, e); }
+    if (!e.article && w.article) e.article = w.article; if (!e.plural && w.plural) e.plural = w.plural; if (!e.translation && w.translation) e.translation = w.translation;
+    if (w.form) e.forms.set(w.form, w.note || "");
+    if (!e.refs.some(r => r.s.id === s.id)) e.refs.push({date: log.date, s});
+    e.uses = (e.uses || 0) + 1;
+    if (w.form && own.has(String(w.form).toLowerCase())) e.own = true;
+    const c = String(w.cefr || "").toUpperCase().trim(); if (!e.cefr && /^[ABC][12]$/.test(c)) e.cefr = c;
+   }
+  }
+  return [...map.values()];
+}
+async function renderLog() {
+  const logs = await loadLogs();
+  const sentences = []; for (const l of logs) for (const s of l.sentences || []) sentences.push({...s, date: l.date});
+  const words = buildWords(logs);
+  const cefrMap = (await dbGet("cefr")) || {};
+  for (const w of words) { w.cefr = w.cefr || cefrMap[w.key] || null; w.group = posGroup(w.pos); }
+  const groups = groupSentences(sentences);
+  state._words = words;
+  const q = state.logQuery.trim().toLowerCase();
+  const tab = state.logTab;
+  let list = "";
+  if (!sentences.length) list = `<div class="empty-state"><p>Your log is empty.</p><p class="small">Write a journal page, tap <b>Check page</b>, then <b>Save to my log</b>. Your sentences and words will be sorted here from A to Z.</p></div>`;
+  else if (tab === "sentences") {
+    const items = groups.filter(g => !q || (g.corrected + " " + [...g.wrong.keys()].join(" ") + " " + g.translation).toLowerCase().includes(q))
+      .sort((a, b) => deCompare(a.corrected.replace(/^[^\p{L}]+/u, ""), b.corrected.replace(/^[^\p{L}]+/u, "")));
+    let cur = ""; for (const g of items) {
+      const L = letterOf(g.corrected.replace(/^[^\p{L}]+/u, "")); if (L !== cur) { cur = L; list += `<div class="letter">${L}</div>`; }
+      list += `<div class="item"><div class="word-line"><span>${esc(g.corrected)}</span>${g.dates.length > 1 ? `<span class="count">${g.dates.length}×</span>` : ""}</div>
+        ${[...g.wrong].map(([o, c]) => `<div class="meta">You wrote: ${diffWords(o, c)[0]}</div>`).join("")}
+        ${g.translation ? `<div class="meta">${esc(g.translation)}</div>` : ""}
+        <div class="chips" style="margin-top:6px">${g.dates.map(d => `<button class="chip" data-date="${d}">${esc(deShort(d))}</button>`).join("")}</div></div>`;
+    }
+    if (!items.length) list = `<p class="muted">No sentence matches “${esc(state.logQuery)}”.</p>`;
+  } else if (tab === "progress") {
+    list = renderProgress(words);
+  } else {
+    const ft = state.wordType || "all", fl = state.wordLevel || "all";
+    list += `<div class="row" style="margin-top:12px"><select id="fType" style="width:auto">${[["all", "All word types"], ...Object.entries(POS_GROUPS).map(([k, v]) => [k, v.label])].map(([k, l]) => `<option value="${k}" ${ft === k ? "selected" : ""}>${l}</option>`).join("")}</select>
+      <select id="fLevel" style="width:auto">${[["all", "All levels"], ...LEVELS.map(L => [L, L + " words"]), ["none", "Not sorted yet"]].map(([k, l]) => `<option value="${k}" ${fl === k ? "selected" : ""}>${l}</option>`).join("")}</select></div>`;
+    const items = words.filter(w => (ft === "all" || w.group === ft) && (fl === "all" || (fl === "none" ? !w.cefr : w.cefr === fl)))
+      .filter(w => !q || (w.lemma + " " + w.translation + " " + [...w.forms.keys()].join(" ")).toLowerCase().includes(q)).sort((a, b) => deCompare(a.lemma, b.lemma));
+    let cur = ""; for (const w of items) {
+      const L = letterOf(w.lemma); if (L !== cur) { cur = L; list += `<div class="letter">${L}</div>`; }
+      list += `<button class="item" data-word="${esc(w.key)}"><div class="word-line">${w.article ? `<span class="art ${artClass(w.article)}">${esc(w.article)}</span>` : ""}<span class="lemma">${esc(w.lemma)}</span>
+        <span class="muted small">${esc(w.pos)}${w.translation ? " · " + esc(w.translation) : ""}</span>${w.own ? "" : '<span class="from-corr">from a correction</span>'}<span class="count">${w.cefr ? `<span class="lv-mini">${w.cefr}</span>` : ""}${w.uses}×</span></div></button>`;
+    }
+    if (!items.length) list += `<p class="muted">No word matches${state.logQuery ? ` “${esc(state.logQuery)}”` : " these filters"}.</p>`;
+  }
+  $("#main").innerHTML = `<div class="wrap"><h1>Log</h1>
+    <p class="muted small" style="margin-top:6px">${groups.length} sentence${groups.length === 1 ? "" : "s"} · ${words.length} word${words.length === 1 ? "" : "s"}</p>
+    <div class="tabs2"><div class="seg"><button data-t="sentences" aria-pressed="${tab === "sentences"}">Sentences A–Z</button><button data-t="words" aria-pressed="${tab === "words"}">Words A–Z</button><button data-t="progress" aria-pressed="${tab === "progress"}">Progress</button></div></div>
+    ${tab === "progress" ? "" : `<input type="search" id="q" placeholder="Search…" value="${esc(state.logQuery)}" autocapitalize="off">`}
+    <div id="list">${list}</div></div>`;
+  document.querySelectorAll(".tabs2 button").forEach(b => b.onclick = () => { state.logTab = b.dataset.t; renderLog(); });
+  const fT = $("#fType"); if (fT) fT.onchange = () => { state.wordType = fT.value; renderLog(); };
+  const fL = $("#fLevel"); if (fL) fL.onchange = () => { state.wordLevel = fL.value; renderLog(); };
+  document.querySelectorAll("[data-show-type],[data-show-level]").forEach(b => b.onclick = () => {
+    state.logTab = "words"; state.logQuery = ""; state.wordType = b.dataset.showType || "all"; state.wordLevel = b.dataset.showLevel || "all"; renderLog(); });
+  const rs = $("#retrySort"); if (rs) rs.onclick = () => { state._sortFailed = false; renderLog(); };
+  if (tab === "progress") maybeSortWords(words);
+  const qi = $("#q"); if (qi) qi.oninput = () => { state.logQuery = qi.value; clearTimeout(qi._t); qi._t = setTimeout(() => renderLog().then(() => { const n = $("#q"); n.focus(); n.setSelectionRange(n.value.length, n.value.length); }), 250); };
+  document.querySelectorAll(".chip[data-date]").forEach(b => b.onclick = () => openPage(b.dataset.date));
+  document.querySelectorAll(".item[data-word]").forEach(b => b.onclick = () => openWord(state._words.find(w => w.key === b.dataset.word)));
+}
+/* ---------- vocabulary progress (Lingvist-style) ---------- */
+// Approximate number of words needed for each level (cumulative).
+// A1–B1: size of the official Goethe-Institut word lists. B2, C1: commonly cited estimates.
+const VOCAB_TARGET = {A1: 650, A2: 1300, B1: 2400, B2: 4000, C1: 8000};
+const TARGET_LEVELS = Object.keys(VOCAB_TARGET);
+// Typical share of each word type in learner word lists (estimate).
+const POS_GROUPS = {
+  noun: {label: "Nouns", share: 0.50},
+  verb: {label: "Verbs", share: 0.22},
+  adj: {label: "Adjectives & adverbs", share: 0.20},
+  other: {label: "Other small words", share: 0.08}
+};
+function posGroup(pos) {
+  const p = String(pos || "").toLowerCase();
+  if (/nomen|noun|substantiv/.test(p)) return "noun";
+  if (/verb/.test(p) && !/adverb/.test(p)) return "verb";
+  if (/adjektiv|adjective|adverb/.test(p)) return "adj";
+  return "other";
+}
+const fmtN = n => new Intl.NumberFormat("en-GB").format(Math.round(n));
+function nextTarget(n) { return TARGET_LEVELS.find(L => VOCAB_TARGET[L] > n) || null; }
+function renderProgress(words) {
+  const known = words.filter(w => w.own), seen = words.length - known.length, n = known.length;
+  const next = nextTarget(n);
+  let prev = 0;
+  const ladder = TARGET_LEVELS.map(L => {
+    const lo = prev, hi = VOCAB_TARGET[L]; prev = hi;
+    const fill = Math.max(0, Math.min(1, (n - lo) / (hi - lo)));
+    return `<div class="seg-l"><div class="seg-track"><div style="width:${fill * 100}%"></div></div><div class="seg-lab"><b>${L}</b><span>${fmtN(hi)}</span></div></div>`;
+  }).join("");
+  const goal = next || "C1", goalN = VOCAB_TARGET[goal];
+  const typeCards = Object.entries(POS_GROUPS).map(([k, g]) => {
+    const c = known.filter(w => w.group === k).length, t = Math.round(goalN * g.share);
+    return `<button class="pcard" data-show-type="${k}"><div class="small muted">${g.label}</div><div class="pnum">${fmtN(c)}<span> / ~${fmtN(t)}</span></div>
+      <div class="ptrack"><div style="width:${Math.min(100, c / t * 100)}%"></div></div></button>`;
+  }).join("");
+  const unsorted = known.filter(w => !w.cefr).length;
+  let lo = 0;
+  const byLevel = TARGET_LEVELS.map(L => {
+    const need = VOCAB_TARGET[L] - lo; lo = VOCAB_TARGET[L];
+    const c = known.filter(w => w.cefr === L).length;
+    return `<button class="bar bar-lv" data-show-level="${L}"><b>${L}</b><div class="track"><div class="fill" style="width:${Math.min(100, c / need * 100)}%"></div></div><span>${fmtN(c)} / ~${fmtN(need)}</span></button>`;
+  }).join("");
+  const c2 = known.filter(w => w.cefr === "C2").length;
+  let sortLine = "";
+  if (unsorted) {
+    if (!state.settings.key) sortLine = `${unsorted} word${unsorted > 1 ? "s are" : " is"} not sorted by level yet. Add your Gemini key in Settings to sort them.`;
+    else if (!navigator.onLine) sortLine = `${unsorted} word${unsorted > 1 ? "s" : ""} will be sorted by level when you're online.`;
+    else if (state._sortFailed) sortLine = `Sorting by level didn't work: ${esc(state._sortFailed)} <button class="btn slim" id="retrySort">Try again</button>`;
+    else if (state._sortTried && known.filter(w => !w.cefr).every(w => state._sortTried.has(w.key))) sortLine = `${unsorted} word${unsorted > 1 ? "s" : ""} couldn't be sorted.`;
+    else sortLine = spinner(`Sorting ${unsorted} word${unsorted > 1 ? "s" : ""} by level…`);
+  }
+  return `<div class="panel hero">
+      <div class="hero-num">${fmtN(n)}</div>
+      <div>word${n === 1 ? "" : "s"} you've used yourself in your journal${seen ? ` <span class="muted">· plus ${fmtN(seen)} more met in corrections</span>` : ""}</div>
+      <div class="ladder">${ladder}</div>
+      <p style="margin:12px 0 0">${next ? `Next goal: <b>${next}</b> at about ${fmtN(VOCAB_TARGET[next])} words. <b>${fmtN(VOCAB_TARGET[next] - n)}</b> to go.` : "You're past the C1 estimate. Beeindruckend!"}</p>
+    </div>
+    <h2>By word type <span class="small muted">(goal: ${goal})</span></h2>
+    <div class="pgrid">${typeCards}</div>
+    <h2>By level of the word</h2>
+    <p class="small muted">How many words from each level's list you already use, compared with roughly how many new words that level adds.</p>
+    <div class="panel bars">${byLevel}${c2 ? `<div class="small muted">Plus ${fmtN(c2)} C2 word${c2 > 1 ? "s" : ""}.</div>` : ""}</div>
+    <div class="status" id="sortStatus">${sortLine}</div>
+    <p class="small muted" style="margin-top:14px">Tap any card or bar to see those words. Only words you wrote yourself count as known; words that only appeared in a correction are listed in Words A–Z with the label “from a correction”, and start counting once you use them in your own writing. The goals are approximate: the official Goethe-Institut word lists have about 650 words for A1, 1,300 for A2 and 2,400 for B1; for B2 and C1 there are no official lists, and around 4,000 and 8,000 words are common estimates. The split by word type is an estimate based on typical word lists.</p>`;
+}
+async function maybeSortWords(words) {
+  state._sortTried = state._sortTried || new Set();
+  const todo = words.filter(w => !w.cefr && !state._sortTried.has(w.key));
+  if (!todo.length || !state.settings.key || !navigator.onLine || state._sortFailed || state._sorting) return;
+  state._sorting = true;
+  try {
+    const map = (await dbGet("cefr")) || {};
+    for (let i = 0; i < todo.length; i += 80) {
+      const batch = todo.slice(i, i + 80);
+      batch.forEach(w => state._sortTried.add(w.key));
+      const st = $("#sortStatus"); if (st && todo.length > 80) st.innerHTML = spinner(`Sorting words by level… ${i} of ${todo.length}`);
+      const r = await gemini([{text: `For each German word below, give the CEFR level at which learners normally learn it, based on the Goethe-Institut / Profile Deutsch word lists: A1, A2, B1, B2, C1 or C2.
+${batch.map((w, k) => `${k + 1}. ${w.lemma} (${w.pos || "?"})`).join("\n")}
+Return only JSON: {"levels":["A1", ...]} with exactly ${batch.length} entries, in the same order.`}]);
+      const lv = Array.isArray(r.levels) ? r.levels : [];
+      batch.forEach((w, k) => { const L = String(lv[k] || "").toUpperCase().trim(); if (LEVELS.includes(L)) map[w.key] = L; });
+      await dbSet("cefr", map);
+    }
+  } catch (e) { state._sortFailed = e.message; }
+  state._sorting = false;
+  if (state.view === "log" && state.logTab === "progress") renderLog();
+}
+
+async function openWord(w) {
+  if (!w) return;
+  const isVerb = /verb/i.test(w.pos);
+  const box = openSheet((w.article ? w.article + " " : "") + w.lemma, `
+    <p>${w.article ? `<span class="art ${artClass(w.article)}">${esc(w.article)}</span> ` : ""}<b style="font-size:22px">${esc(w.lemma)}</b>${w.plural ? ` <span class="muted">· Plural: die ${esc(w.plural)}</span>` : ""}</p>
+    <p class="muted">${esc(w.pos)}${w.translation ? " · " + esc(w.translation) : ""}</p>
+    <h3 style="margin-top:16px">Forms you used</h3>
+    <ul style="margin:4px 0 0;padding-left:18px">${[...w.forms].map(([f, n]) => `<li><b>${esc(f)}</b>${n ? ` <span class="muted small">${esc(n)}</span>` : ""}</li>`).join("")}</ul>
+    <h3 style="margin-top:16px">In your sentences</h3>
+    ${groupSentences(w.refs.map(r => ({...r.s, date: r.date}))).map(g => `<div class="item"><div>${esc(g.corrected)}</div><div class="chips" style="margin-top:6px">${g.dates.map(d => `<button class="chip" data-date="${d}">${esc(deShort(d))}</button>`).join("")}</div></div>`).join("")}
+    ${isVerb ? `<h3 style="margin-top:20px">Conjugation</h3><div id="conj"></div>` : ""}
+    <h3 style="margin-top:20px">Ask about this word</h3>
+    <div class="row"><button class="btn slim" id="moreEx">More example sentences</button></div><div id="ex"></div>`);
+  box.querySelectorAll(".chip[data-date]").forEach(b => b.onclick = () => { closeSheet(); openPage(b.dataset.date); });
+  if (isVerb) showConj(w.lemma, $("#conj", box));
+  $("#moreEx", box).onclick = async () => {
+    const ex = $("#ex", box); ex.innerHTML = `<p class="status"><span class="spin"></span>Writing examples…</p>`;
+    try {
+      const r = await gemini([{text: `Give 4 short, natural German example sentences using "${w.lemma}" (${w.pos}), from easy to harder, each with a ${state.settings.lang} translation. Return only JSON: {"examples":[{"de":"...","tr":"..."}]}`}]);
+      ex.innerHTML = (r.examples || []).map(e => `<div class="sent"><div class="de">${esc(e.de)}</div><div class="tr">${esc(e.tr)}</div></div>`).join("");
+    } catch (e) { ex.innerHTML = `<p class="muted">${esc(e.message)}</p>`; }
+  };
+}
+async function showConj(lemma, el) {
+  const key = "conj:" + lemma.toLowerCase();
+  const cached = await dbGet(key);
+  const draw = c => {
+    el.innerHTML = `<p class="small">${c.partizip2 ? `Partizip II: <b>${esc(c.partizip2)}</b> · ` : ""}Perfekt with <b>${esc(c.auxiliary || "")}</b></p>
+      <div class="conj-grid">${(c.tables || []).map(t => `<div class="panel"><h3>${esc(t.name)}</h3><table class="conj">${(t.forms || []).map(f => `<tr><td>${esc(f)}</td></tr>`).join("")}</table></div>`).join("")}</div>
+      ${c.notes ? `<div class="gram">${esc(c.notes)}</div>` : ""}`;
+  };
+  if (cached) return draw(cached);
+  el.innerHTML = `<button class="btn slim" id="loadConj">Show all tenses</button>`;
+  $("#loadConj", el).onclick = async () => {
+    el.innerHTML = `<p class="status"><span class="spin"></span>Conjugating…</p>`;
+    try {
+      const c = await gemini([{text: `Conjugate the German verb "${lemma}". Return only JSON: {"auxiliary":"haben or sein","partizip2":"...","tables":[{"name":"Präsens","forms":["ich …","du …","er/sie/es …","wir …","ihr …","sie/Sie …"]},{"name":"Präteritum","forms":[6 forms]},{"name":"Perfekt","forms":[6 forms]},{"name":"Futur I","forms":[6 forms]},{"name":"Konjunktiv II","forms":[6 forms]},{"name":"Imperativ","forms":["(du) …","(ihr) …","(Sie) …"]}],"notes":"one or two sentences in ${state.settings.lang} on anything irregular or separable about this verb"}`}]);
+      await dbSet(key, c); draw(c);
+    } catch (e) { el.innerHTML = `<p class="muted">${esc(e.message)}</p>`; }
+  };
+}
+
+/* ---------- level tests ---------- */
+const LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"];
+const CHECK_LEVELS = ["A1", "A2", "B1", "B2", "C1"];
+const CATS = ["Grammatik", "Konjugation", "Wortschatz"];
+const CAT_EN = {Grammatik: "Grammar", Konjugation: "Conjugation", Wortschatz: "Vocabulary"};
+const REACHED = 0.66;
+
+/* Placement test: 6 questions per level, all with the right answer first (options are shuffled when the test starts). */
+const PLACEMENT = [
+  {level: "A1", cat: "Konjugation", q: "Ich ___ aus Frankreich.", options: ["komme", "kommst", "kommt", "kommen"], explain: "With ich the verb ends in -e: ich komme."},
+  {level: "A1", cat: "Konjugation", q: "Wir ___ heute Abend ins Kino.", options: ["gehen", "geht", "gehst", "gehe"], explain: "With wir the verb ends in -en: wir gehen."},
+  {level: "A1", cat: "Grammatik", q: "Das ist ___ Tisch.", options: ["ein", "eine", "einen", "einem"], explain: "Tisch is masculine (der Tisch); in the nominative the indefinite article is ein."},
+  {level: "A1", cat: "Grammatik", q: "Ich habe ___ Bruder und eine Schwester.", options: ["einen", "ein", "einem", "eine"], explain: "haben takes the accusative; masculine ein becomes einen."},
+  {level: "A1", cat: "Grammatik", q: "___ wohnst du? – In Berlin.", options: ["Wo", "Wer", "Wann", "Was"], explain: "Wo asks for a place."},
+  {level: "A1", cat: "Wortschatz", q: "Morgens trinke ich gern ___.", options: ["Kaffee", "Brot", "Käse", "Apfel"], explain: "Only Kaffee is something you drink."},
+  {level: "A2", cat: "Konjugation", q: "Gestern ___ ich ins Kino gegangen.", options: ["bin", "habe", "war", "hatte"], explain: "Verbs of movement like gehen form the Perfekt with sein."},
+  {level: "A2", cat: "Grammatik", q: "Ich helfe ___ Mutter.", options: ["meiner", "meine", "meinen", "mein"], explain: "helfen takes the dative: die Mutter → meiner Mutter."},
+  {level: "A2", cat: "Grammatik", q: "Er bleibt zu Hause, ___ er krank ist.", options: ["weil", "denn", "aber", "deshalb"], explain: "weil sends the verb to the end (… krank ist); denn and aber keep normal word order."},
+  {level: "A2", cat: "Grammatik", q: "Morgen fahre ich ___ meiner Oma.", options: ["zu", "nach", "bei", "in"], explain: "To go to a person is zu + dative; nach is for cities and countries."},
+  {level: "A2", cat: "Grammatik", q: "Mein Bruder ist ___ als ich.", options: ["größer", "groß", "am größten", "größte"], explain: "Comparisons with als use the comparative: größer als."},
+  {level: "A2", cat: "Wortschatz", q: "Ich habe Kopfschmerzen, deshalb gehe ich zum ___.", options: ["Arzt", "Bäcker", "Friseur", "Bahnhof"], explain: "With a headache you go to the doctor: der Arzt."},
+  {level: "B1", cat: "Grammatik", q: "Das ist der Mann, ___ ich gestern geholfen habe.", options: ["dem", "den", "der", "dessen"], explain: "helfen takes the dative, so the masculine relative pronoun is dem."},
+  {level: "B1", cat: "Konjugation", q: "Wenn ich mehr Zeit ___, würde ich mehr lesen.", options: ["hätte", "habe", "hatte", "haben"], explain: "Unreal conditions use Konjunktiv II: wenn ich Zeit hätte."},
+  {level: "B1", cat: "Grammatik", q: "Ich interessiere mich ___ Musik.", options: ["für", "an", "über", "auf"], explain: "sich interessieren für + accusative."},
+  {level: "B1", cat: "Grammatik", q: "Er fragt, ___ ich morgen Zeit habe.", options: ["ob", "dass", "weil", "denn"], explain: "A yes/no question reported indirectly starts with ob."},
+  {level: "B1", cat: "Konjugation", q: "Als ich ein Kind ___, wohnten wir in Hamburg.", options: ["war", "bin", "wäre", "sei"], explain: "als for a single period in the past takes the Präteritum: als ich ein Kind war."},
+  {level: "B1", cat: "Konjugation", q: "Nachdem er gegessen ___, ging er spazieren.", options: ["hatte", "hat", "war", "ist"], explain: "nachdem + an earlier past action takes the Plusquamperfekt; essen uses haben."},
+  {level: "B2", cat: "Konjugation", q: "Das Haus ___ 1900 von meinem Urgroßvater gebaut.", options: ["wurde", "wird", "war", "hat"], explain: "Passive in the past with an agent (von …): wurde + Partizip II."},
+  {level: "B2", cat: "Grammatik", q: "___ des schlechten Wetters wurde das Konzert abgesagt.", options: ["Wegen", "Trotz", "Obwohl", "Weil"], explain: "wegen + genitive gives the reason; obwohl and weil are conjunctions and need a verb."},
+  {level: "B2", cat: "Grammatik", q: "Er tut so, ___ er alles wüsste.", options: ["als ob", "wenn", "ob", "damit"], explain: "als ob + Konjunktiv II describes a false impression."},
+  {level: "B2", cat: "Grammatik", q: "Je mehr ich übe, ___ besser spreche ich.", options: ["desto", "als", "so", "wie"], explain: "The pair is je … desto (or je … umso)."},
+  {level: "B2", cat: "Grammatik", q: "Ich habe gestern mit dem ___ gesprochen.", options: ["Nachbarn", "Nachbar", "Nachbars", "Nachbaren"], explain: "Nachbar is an n-noun: it takes -n in every case except the nominative singular."},
+  {level: "B2", cat: "Wortschatz", q: "Die Regierung hat das neue Gesetz in Kraft ___.", options: ["gesetzt", "gestellt", "gelegt", "gebracht"], explain: "Fixed expression: etwas in Kraft setzen = to put into effect."},
+  {level: "C1", cat: "Konjugation", q: "Kaum ___ er angekommen, klingelte das Telefon.", options: ["war", "ist", "hatte", "wäre"], explain: "Plusquamperfekt with sein (ankommen) for the earlier action: kaum war er angekommen."},
+  {level: "C1", cat: "Grammatik", q: "Der ___ Antrag wird noch geprüft.", options: ["eingereichte", "einreichende", "eingereicht", "einreichen"], explain: "A participle used as an adjective takes an ending: der eingereichte Antrag (the application that was submitted)."},
+  {level: "C1", cat: "Konjugation", q: "Er behauptet, er ___ krank gewesen.", options: ["sei", "seien", "sein", "seid"], explain: "Reported speech uses Konjunktiv I: er sei krank gewesen."},
+  {level: "C1", cat: "Grammatik", q: "___ der hohen Kosten wurde das Projekt fortgesetzt.", options: ["Ungeachtet", "Aufgrund", "Infolge", "Anlässlich"], explain: "ungeachtet + genitive = in spite of; the others give a cause or occasion, which doesn't fit 'continued'."},
+  {level: "C1", cat: "Grammatik", q: "Er spricht kaum Englisch, ___ denn Chinesisch.", options: ["geschweige", "sondern", "außer", "sowie"], explain: "geschweige denn = let alone, after a negative statement."},
+  {level: "C1", cat: "Wortschatz", q: "Das Gesetz wurde gestern vom Parlament ___.", options: ["verabschiedet", "verabredet", "entlassen", "verlassen"], explain: "Ein Gesetz verabschieden = to pass a law."},
+  {level: "C2", cat: "Wortschatz", q: "Dieser Einwand lässt sich nicht ___ Hand weisen.", options: ["von der", "aus der", "mit der", "an der"], explain: "Idiom: etwas nicht von der Hand weisen können = it can't be dismissed."},
+  {level: "C2", cat: "Wortschatz", q: "Im Schach kann ihm niemand ___ reichen.", options: ["das Wasser", "die Hand", "den Rang", "das Feuer"], explain: "Idiom: jemandem nicht das Wasser reichen können = to be no match for someone."},
+  {level: "C2", cat: "Grammatik", q: "___ man es auch dreht und wendet, das Ergebnis bleibt gleich.", options: ["Wie", "Was", "Wo", "Ob"], explain: "Fixed concessive form: wie man es auch dreht und wendet = however you look at it."},
+  {level: "C2", cat: "Wortschatz", q: "Endlich hat sie ihm reinen Wein ___.", options: ["eingeschenkt", "eingegossen", "gegeben", "serviert"], explain: "Idiom: jemandem reinen Wein einschenken = to tell someone the plain truth."},
+  {level: "C2", cat: "Wortschatz", q: "Bei der Abrechnung ist ihm ein Fehler ___.", options: ["unterlaufen", "unterlegen", "unterworfen", "unterstellt"], explain: "Ein Fehler unterläuft jemandem = someone makes a mistake without noticing."},
+  {level: "C2", cat: "Grammatik", q: "So ___ das Angebot auch sein mag, ich lehne es ab.", options: ["verlockend", "verlockende", "verlockt", "verlocken"], explain: "Concessive so … auch with a predicative adjective: no ending, so verlockend es auch sein mag."}
+];
+
+/* What each level check covers (based on the usual Goethe/telc syllabus). */
+const SYLLABUS = {
+  A1: {
+    Grammatik: ["Bestimmter und unbestimmter Artikel (Nominativ)", "Akkusativ nach haben, brauchen, möchten", "Verneinung mit nicht und kein", "Satzbau: Verb an Position 2 und W-Fragen", "Ja/Nein-Fragen", "Possessivartikel mein, dein, sein, ihr", "Präpositionen der Zeit: am, um, im", "Pluralformen der Nomen"],
+    Konjugation: ["Präsens regelmäßiger Verben", "sein und haben", "Verben mit Vokalwechsel (fahren, essen, lesen)", "Modalverben können, müssen, möchten", "Trennbare Verben (aufstehen, einkaufen)", "Imperativ mit du und Sie"],
+    Wortschatz: ["Begrüßung und sich vorstellen", "Zahlen, Uhrzeit und Datum", "Familie", "Essen und Trinken", "Wohnung und Möbel", "Alltag und Freizeit", "Einkaufen und Preise"]
+  },
+  A2: {
+    Grammatik: ["Dativ: Artikel und Personalpronomen", "Verben mit Dativ (helfen, gefallen, gehören)", "Präpositionen mit Dativ (mit, bei, nach, zu, von, aus, seit)", "Wechselpräpositionen: wo? (Dativ) / wohin? (Akkusativ)", "Nebensätze mit weil, dass, wenn", "Komparativ und Superlativ", "Adjektivendungen im Nominativ und Akkusativ", "Konnektoren deshalb, trotzdem, denn"],
+    Konjugation: ["Perfekt mit haben", "Perfekt mit sein", "Partizip II: regelmäßig, unregelmäßig, trennbar", "Präteritum von sein, haben und Modalverben", "Reflexive Verben (sich freuen, sich waschen)", "Höfliche Bitten: würde, könnte, hätte gern"],
+    Wortschatz: ["Körper und Gesundheit", "Reisen und Verkehr", "Arbeit und Berufe", "Kleidung und Aussehen", "Wetter und Jahreszeiten", "Feste und Feiern", "Medien und Kommunikation"]
+  },
+  B1: {
+    Grammatik: ["Relativsätze im Nominativ, Akkusativ und Dativ", "Genitiv und Präpositionen wegen, trotz, während", "Adjektivendungen in allen Fällen", "Infinitiv mit zu, um … zu, damit", "Temporale Nebensätze: als, wenn, während, bevor, nachdem", "Indirekte Fragen mit ob und W-Wort", "Verben mit festen Präpositionen und da-/wo-Wörter", "Doppelkonnektoren: sowohl … als auch, weder … noch, entweder … oder"],
+    Konjugation: ["Präteritum regelmäßiger und unregelmäßiger Verben", "Plusquamperfekt", "Konjunktiv II der Gegenwart (Wünsche, irreale Bedingungen)", "Passiv Präsens und Präteritum", "Futur I", "Das Verb lassen"],
+    Wortschatz: ["Arbeit und Bewerbung", "Umwelt und Natur", "Wohnen und Nachbarschaft", "Schule, Studium und Weiterbildung", "Gefühle und Beziehungen", "Konsum, Geld und Werbung"]
+  },
+  B2: {
+    Grammatik: ["n-Deklination", "Partizip I und II als Adjektiv", "Nominalisierung (bei Ankunft, nach dem Essen)", "Konnektoren: falls, sofern, indem, sodass, je … desto", "Relativsätze mit Präposition und mit wer, was, wo", "Konzessive Sätze: obwohl, trotzdem, zwar … aber", "Modalpartikeln (doch, mal, ja, eben)", "Genitivpräpositionen: innerhalb, außerhalb, statt, aufgrund"],
+    Konjugation: ["Passiv mit Modalverben", "Zustandspassiv (ist geöffnet)", "Passiversatz: sich lassen, sein + zu, -bar", "Konjunktiv II der Vergangenheit", "Konjunktiv I in der indirekten Rede (Grundformen)", "Futur I und II als Vermutung"],
+    Wortschatz: ["Nomen-Verb-Verbindungen (zur Verfügung stellen, in Frage kommen)", "Wissenschaft und Technik", "Gesellschaft und Politik", "Wirtschaft und Arbeitswelt", "Häufige Redewendungen", "Synonyme und Stilebenen"]
+  },
+  C1: {
+    Grammatik: ["Erweiterte Partizipialattribute", "Subjektive Modalverben (soll, will, dürfte, müsste)", "Nominalstil und Verbalstil umformen", "Gehobene Konnektoren: zumal, insofern, wohingegen, geschweige denn", "Präpositionen mit Genitiv: angesichts, hinsichtlich, ungeachtet, infolge", "Feste Präpositionen von Adjektiven und Nomen", "Wortstellung im Mittelfeld"],
+    Konjugation: ["Konjunktiv I in allen Zeiten (indirekte Rede)", "Konjunktiv II mit Modalverben in der Vergangenheit (hätte … müssen)", "Passiv in allen Zeiten, auch mit Modalverben", "Seltene starke und gemischte Verben", "Untrennbare und trennbare Präfixverben (umfahren, übersetzen)"],
+    Wortschatz: ["Funktionsverbgefüge", "Redewendungen und Idiome", "Bedeutungsnuancen von Präfixverben (verlegen, belegen, erlegen)", "Wissenschafts- und Fachsprache", "Formelle und informelle Sprache", "Wortbildung: Nomen und Adjektive ableiten"]
+  }
+};
+
+function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function prepQs(qs) { return qs.map(q => { const right = q.options[q.answer ?? 0]; const opts = shuffle(q.options); return {...q, options: opts, answer: opts.indexOf(right)}; }); }
+function newRun(kind, qs, extra = {}) { return {kind, ...extra, i: 0, answers: [], flagged: [], qs: prepQs(qs), started: Date.now()}; }
+async function persistRun() { const t = state.test; if (t && t.kind === "check") await dbSet("check:" + t.level, t); }
+const pct = (c, n) => n ? Math.round(c / n * 100) : 0;
+const spinner = msg => `<span class="spin"></span>${esc(msg)}`;
+
+async function renderLevel() {
+  const t = state.test;
+  if (t && t.i < t.qs.length) return renderQuestion();
+  const tests = (await dbGet("tests")) || [];
+  const checks = (await dbGet("checks")) || {};
+  const runs = {}; for (const L of CHECK_LEVELS) runs[L] = await dbGet("check:" + L);
+  const logs = (await loadLogs()).filter(l => l.level).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 7);
+  const last = tests[tests.length - 1];
+  const hasKey = !!state.settings.key;
+  const checkRow = L => {
+    const res = (checks[L] || []).slice(-1)[0], run = runs[L];
+    let status = run ? "" : "Not taken yet";
+    if (res) status = res.validated ? `✓ Validated, ${res.pct}% · ${esc(deShort(res.date))}` : `Not validated yet, ${res.pct}% · ${esc(deShort(res.date))}`;
+    const answered = run ? run.answers.length : 0;
+    return `<div class="panel lv-row"><div class="lv-badge ${res && res.validated ? "ok" : ""}">${L}</div>
+      <div style="flex:1;min-width:180px"><b>${L} level check</b><div class="small muted">${status}${run ? `${status ? " · " : ""}In progress: ${answered} of ${run.qs.length} answered` : ""}</div></div>
+      <div class="row">${run ? `<button class="btn slim primary" data-cont="${L}">Continue</button>` : `<button class="btn slim ${res ? "" : "primary"}" data-start="${L}" ${hasKey ? "" : "disabled"}>${res ? "Take again" : "Start"}</button>`}
+      ${res ? `<button class="btn slim" data-res="${L}">Results</button>` : ""}</div></div>`;
+  };
+  $("#main").innerHTML = `<div class="wrap"><h1>Level</h1>
+    <div class="panel" style="margin-top:18px">
+      ${last ? `<p>Placement result: <span class="level-pill">${esc(last.est)}</span> <span class="muted small">(${esc(deShort(last.date))}, ${last.score}/${last.total})</span></p>` : `<p style="margin:0">Start with the placement test to find your level, then use the level checks to see exactly what's missing.</p>`}
+      ${logs.length ? `<p class="small" style="margin:8px 0 0">Your recent journal pages read like: ${logs.map(l => `<b>${esc(l.level)}</b> <span class="muted">(${esc(deShort(l.date))})</span>`).join(", ")}</p>` : ""}
+    </div>
+
+    <h2>Placement test</h2>
+    <p class="small muted">36 questions, 6 for each level from A1 to C2. A level counts as reached when you get at least 4 of its 6 right, and the levels below it too. About 10 minutes.</p>
+    <div class="row"><button class="btn primary" id="tBuiltin">Start the standard test</button>
+      <button class="btn" id="tAI" ${hasKey ? "" : "disabled"}>New AI-made test</button></div>
+    <p class="small muted" style="margin-top:8px">${hasKey ? "The standard test is always the same, so you can compare results over time. The AI test has new questions every time." : "Add your Gemini key in Settings to get AI-made tests and level checks."}</p>
+    <div id="tStatus" class="status"></div>
+
+    <h2>Level checks</h2>
+    <p class="small muted">A long test for one level, covering the grammar, conjugation and vocabulary topics that level requires, with 3 questions per topic (60 or so in total). You can pause any time and continue later. At the end you see which topics are solid, which to review, and which are missing. A level is validated at 70% overall and at least 60% in each part.</p>
+    ${CHECK_LEVELS.map(checkRow).join("")}
+    <div id="cStatus" class="status"></div>
+
+    ${tests.length ? `<h2>Placement history</h2>${tests.slice().reverse().map(x => `<div class="item"><b>${esc(x.est)}</b> · ${x.score}/${x.total} <span class="meta">${esc(deShort(x.date))} · ${x.kind === "ai" ? "AI test" : "standard test"}</span></div>`).join("")}` : ""}
+  </div>`;
+  $("#tBuiltin").onclick = () => { state.test = newRun("placement", PLACEMENT, {source: "standard"}); renderLevel(); };
+  $("#tAI").onclick = () => startAIPlacement();
+  document.querySelectorAll("[data-start]").forEach(b => b.onclick = () => startCheck(b.dataset.start));
+  document.querySelectorAll("[data-cont]").forEach(b => b.onclick = async () => { const run = await dbGet("check:" + b.dataset.cont); run.i = run.answers.length; state.test = run; renderLevel(); });
+  document.querySelectorAll("[data-res]").forEach(b => b.onclick = async () => { const c = (await dbGet("checks")) || {}; renderCheckResult(c[b.dataset.res].slice(-1)[0]); });
+}
+
+async function startAIPlacement() {
+  const st = $("#tStatus"); if (!navigator.onLine) { st.textContent = "You're offline. The standard test works offline."; return; }
+  $("#tAI").disabled = true; st.innerHTML = spinner("Writing your test…");
+  onRetry = n => { st.innerHTML = spinner(`Google is busy, trying again (${n} of 3)…`); };
+  try {
+    const r = await gemini([{text: `Write a German placement test: 36 multiple-choice gap-fill questions, exactly 6 for each CEFR level A1, A2, B1, B2, C1, C2. Each level must clearly match its level, so the difference between levels is sharp: A1 = basic present tense and everyday words; C2 = idioms and rare structures. Per level mix grammar, conjugation and vocabulary. Each question is one German sentence with ___ for the gap and 4 options with exactly one correct; check each wrong option is clearly wrong in that sentence (never a second acceptable answer). "cat" is "Grammatik", "Konjugation" or "Wortschatz". Explanations in ${state.settings.lang}, one sentence. Return only JSON: {"questions":[{"level":"A1","cat":"Grammatik","q":"...","options":["...","...","...","..."],"answer":0,"explain":"..."}]}`}]);
+    const qs = (r.questions || []).filter(validQ).filter(q => LEVELS.includes(q.level));
+    if (qs.length < 24) throw new Error("The AI test came back incomplete. Try again.");
+    qs.sort((a, b) => LEVELS.indexOf(a.level) - LEVELS.indexOf(b.level));
+    state.test = newRun("placement", qs, {source: "ai"}); renderLevel();
+  } catch (e) { st.textContent = e.message; $("#tAI").disabled = false; }
+  onRetry = null;
+}
+function validQ(q) { return q && typeof q.q === "string" && Array.isArray(q.options) && q.options.length >= 3 && Number.isInteger(q.answer) && q.options[q.answer] !== undefined && new Set(q.options).size === q.options.length; }
+
+function pCheck(L, cat, topics) {
+  return `You are writing an official-style German level check for CEFR level ${L}, part "${cat}" (${CAT_EN[cat]}).
+Topics:
+${topics.map((t, i) => `${i + 1}. ${t}`).join("\n")}
+
+For EACH topic write exactly 3 multiple-choice questions that test that topic at level ${L}. Sentences and words must fit level ${L}.
+Rules:
+- Each question is one German sentence with ___ marking the gap. For vocabulary you may also ask a short German question (the right word, the opposite, the meaning).
+- 4 options, exactly one correct. Check every wrong option carefully: it must be clearly wrong in this sentence (wrong case, ending, verb form, word order or meaning), never a second acceptable answer.
+- No two questions test the same word or the same sentence pattern.
+- "explain": one short sentence in ${state.settings.lang} naming the rule or meaning.
+Return only JSON: {"questions":[{"t": topic number, "q":"...","options":["...","...","...","..."],"answer": index of the correct option,"explain":"..."}]}`;
+}
+async function startCheck(L) {
+  const st = $("#cStatus");
+  if (!navigator.onLine) { st.textContent = "You're offline. Level checks are written by the AI, so you need internet to start one (you can continue a started one offline)."; return; }
+  if (!state.settings.key) { st.textContent = "Add your Gemini key in Settings first."; return; }
+  document.querySelectorAll("[data-start],[data-cont],#tBuiltin,#tAI").forEach(b => b.disabled = true);
+  let all = [];
+  try {
+    for (let k = 0; k < CATS.length; k++) {
+      const cat = CATS[k], topics = SYLLABUS[L][cat];
+      st.innerHTML = spinner(`Writing the ${L} check: ${CAT_EN[cat].toLowerCase()} part (${k + 1} of 3)…`);
+      onRetry = n => { st.innerHTML = spinner(`Google is busy, trying again (${n} of 3)…`); };
+      const r = await gemini([{text: pCheck(L, cat, topics)}]);
+      const qs = (r.questions || []).filter(validQ).map(q => ({...q, level: L, cat, topic: topics[(q.t | 0) - 1]})).filter(q => q.topic);
+      if (qs.length < topics.length * 2) throw new Error(`The ${CAT_EN[cat].toLowerCase()} part came back incomplete. Try again in a moment.`);
+      all = all.concat(shuffle(qs));
+      if (k < CATS.length - 1) await sleep(1500);
+    }
+    state.test = newRun("check", all, {level: L});
+    await persistRun(); renderLevel();
+  } catch (e) { st.textContent = e.message; renderLevelButtonsBack(); }
+  onRetry = null;
+}
+function renderLevelButtonsBack() { document.querySelectorAll("[data-start],[data-cont],#tBuiltin").forEach(b => b.disabled = false); const ai = $("#tAI"); if (ai) ai.disabled = !state.settings.key; }
+
+function renderQuestion() {
+  const t = state.test, q = t.qs[t.i], isCheck = t.kind === "check";
+  $("#main").innerHTML = `<div class="wrap">
+    <div class="row"><span class="muted">${isCheck ? `${t.level} check · ${CAT_EN[q.cat] || ""} · ` : ""}Question ${t.i + 1} of ${t.qs.length}</span><span class="spacer"></span>
+      <button class="btn slim" id="quit">${isCheck ? "Pause" : "Stop test"}</button></div>
+    <div class="progress"><div style="width:${t.i / t.qs.length * 100}%"></div></div>
+    <div class="q">${esc(q.q).replace(/_{2,}/g, '<span class="gap">&nbsp;</span>')}</div>
+    <div class="opts">${q.options.map((o, i) => `<button class="opt" data-i="${i}">${esc(o)}</button>`).join("")}</div>
+    <div id="fb" style="margin-top:14px"></div></div>`;
+  $("#quit").onclick = async () => {
+    if (isCheck) { await persistRun(); state.test = null; renderLevel(); toast("Paused. Tap Continue to pick up where you stopped."); }
+    else if (t.answers.length < 3 || confirm("Stop the test? Your answers so far won't be counted.")) { state.test = null; renderLevel(); }
+  };
+  document.querySelectorAll(".opt").forEach(b => b.onclick = async () => {
+    const i = Number(b.dataset.i), ok = i === q.answer;
+    t.answers[t.i] = ok;
+    document.querySelectorAll(".opt").forEach(x => { x.disabled = true; const k = Number(x.dataset.i); if (k === q.answer) x.classList.add("right"); else if (k === i) x.classList.add("wrong"); });
+    $("#fb").innerHTML = `<p>${ok ? "<b>Richtig!</b> " : "<b>Not quite.</b> "}${esc(q.explain || "")}</p>
+      ${q.topic ? `<p class="small muted">Topic: ${esc(q.topic)}</p>` : ""}
+      <div class="row"><button class="btn primary" id="nextQ">${t.i + 1 < t.qs.length ? "Next question" : "See my result"}</button>
+      <button class="btn slim" id="flag">This question looks wrong</button></div>`;
+    $("#flag").onclick = async () => {
+      const on = !t.flagged.includes(t.i);
+      t.flagged = on ? [...t.flagged, t.i] : t.flagged.filter(x => x !== t.i);
+      $("#flag").textContent = on ? "Removed from your score ✓" : "This question looks wrong"; await persistRun();
+    };
+    await persistRun();
+    $("#nextQ").onclick = async () => { t.i++; await persistRun(); if (t.i < t.qs.length) renderQuestion(); else (t.kind === "check" ? finishCheck() : finishPlacement()); };
+  });
+}
+function tally(t, keyFn) {
+  const out = {};
+  t.qs.forEach((q, i) => { if (t.flagged.includes(i)) return; const k = keyFn(q); out[k] = out[k] || {c: 0, n: 0}; out[k].n++; if (t.answers[i]) out[k].c++; });
+  return out;
+}
+function wrongList(t) { return t.qs.map((q, i) => ({q, i})).filter(({i}) => !t.answers[i] && !t.flagged.includes(i)).map(({q}) => ({sentence: q.q.replace(/_{2,}/, q.options[q.answer]), right: q.options[q.answer], explain: q.explain || "", topic: q.topic || "", cat: q.cat || "", level: q.level})); }
+
+async function finishPlacement() {
+  const t = state.test; state.test = null;
+  const per = tally(t, q => q.level);
+  let est = null; for (const L of LEVELS) { const p = per[L]; if (p && p.c / p.n >= REACHED) est = L; else break; }
+  const startedA1 = !est; if (!est) est = "A1";
+  const score = t.answers.filter((a, i) => a && !t.flagged.includes(i)).length, total = t.qs.length - t.flagged.length;
+  const tests = (await dbGet("tests")) || [];
+  tests.push({date: todayStr(), kind: t.source === "ai" ? "ai" : "standard", est: startedA1 ? "A1 (starting)" : est, score, total, per});
+  await dbSet("tests", tests);
+  const label = p => !p ? "" : p.c / p.n >= 0.83 ? "solid" : p.c / p.n >= REACHED ? "reached" : p.c / p.n >= 0.34 ? "partly" : "not yet";
+  const nextL = LEVELS[LEVELS.indexOf(est) + 1];
+  const nextP = nextL && per[nextL];
+  const checkL = startedA1 ? "A1" : (CHECK_LEVELS.includes(nextL) && nextP && nextP.c / nextP.n >= 0.34 ? nextL : (CHECK_LEVELS.includes(est) ? est : null));
+  const wrong = wrongList(t);
+  $("#main").innerHTML = `<div class="wrap"><h1>Your level: ${startedA1 ? "A1 (just starting)" : esc(est)}</h1>
+    <p class="muted" style="margin-top:8px">${score} of ${total} correct.${nextP && !startedA1 ? ` On ${nextL} you got ${nextP.c} of ${nextP.n}: ${nextP.c / nextP.n >= 0.34 ? `${nextL} is within reach.` : `that's your next step.`}` : ""}</p>
+    <div class="panel bars">${LEVELS.map(L => { const p = per[L] || {c: 0, n: 0}; return `<div class="bar bar4"><b>${L}</b><div class="track"><div class="fill ${p.n && p.c / p.n >= REACHED ? "" : "low"}" style="width:${pct(p.c, p.n)}%"></div></div><span>${p.c}/${p.n}</span><span class="small muted">${label(p)}</span></div>`; }).join("")}</div>
+    ${checkL ? `<div class="panel"><p style="margin:0 0 10px">To see exactly which topics you still need, take the <b>${checkL} level check</b>.</p><button class="btn primary" id="goCheck">Go to the ${checkL} level check</button></div>` : ""}
+    ${wrong.length ? `<h2>Questions to review</h2>${wrong.map(w => `<div class="sent"><div><span class="lv-mini">${esc(w.level)}</span> ${esc(w.sentence)}</div><div class="tr">${esc(w.explain)}</div></div>`).join("")}` : "<h2>All correct. Beeindruckend!</h2>"}
+    <div class="row" style="margin-top:16px"><button class="btn" id="done">Back to Level</button></div></div>`;
+  $("#done").onclick = () => renderLevel();
+  const gc = $("#goCheck"); if (gc) gc.onclick = async () => { await renderLevel(); const el = document.querySelector(`[data-start="${checkL}"],[data-cont="${checkL}"]`); if (el) el.scrollIntoView({block: "center"}); };
+}
+
+async function finishCheck() {
+  const t = state.test; state.test = null;
+  const cats = tally(t, q => q.cat), topics = tally(t, q => q.cat + "|" + q.topic);
+  const tot = Object.values(cats).reduce((a, x) => ({c: a.c + x.c, n: a.n + x.n}), {c: 0, n: 0});
+  const p = pct(tot.c, tot.n);
+  const validated = p >= 70 && CATS.every(c => !cats[c] || pct(cats[c].c, cats[c].n) >= 60);
+  const res = {level: t.level, date: todayStr(), pct: p, score: tot.c, total: tot.n, validated,
+    cats: Object.fromEntries(CATS.map(c => [c, cats[c] || {c: 0, n: 0}])),
+    topics: Object.entries(topics).map(([k, v]) => { const [cat, topic] = k.split("|"); return {cat, topic, ...v}; }),
+    wrong: wrongList(t)};
+  const checks = (await dbGet("checks")) || {};
+  checks[t.level] = [...(checks[t.level] || []), res]; await dbSet("checks", checks);
+  await dbDel("check:" + t.level);
+  renderCheckResult(res);
+}
+function topicStatus(x) { const r = x.n ? x.c / x.n : 0; return r >= 0.99 ? "solid" : r >= 0.6 ? "review" : "gap"; }
+function renderCheckResult(res) {
+  const groups = {gap: [], review: [], solid: []};
+  for (const x of res.topics) groups[topicStatus(x)].push(x);
+  const list = (arr, cls) => arr.map(x => `<div class="topic ${cls}"><span>${esc(x.topic)}</span><span class="small muted">${esc(CAT_EN[x.cat])} · ${x.c}/${x.n}</span></div>`).join("");
+  $("#main").innerHTML = `<div class="wrap">
+    <button class="btn slim" id="back">‹ Level</button>
+    <h1 style="margin-top:14px">${esc(res.level)} level check: ${res.validated ? "validated ✓" : "not validated yet"}</h1>
+    <p class="muted" style="margin-top:8px">${res.score} of ${res.total} correct (${res.pct}%) · ${esc(deShort(res.date))}. ${res.validated ? "You master this level. A few topics may still be worth reviewing." : "You need 70% overall and at least 60% in each part. The lists below show what to work on."}</p>
+    <div class="panel bars">${CATS.map(c => { const x = res.cats[c]; return `<div class="bar bar3w"><b>${CAT_EN[c]}</b><div class="track"><div class="fill ${pct(x.c, x.n) >= 60 ? "" : "low"}" style="width:${pct(x.c, x.n)}%"></div></div><span>${pct(x.c, x.n)}%</span></div>`; }).join("")}</div>
+    ${groups.gap.length ? `<h2>Missing <span class="small muted">(0–1 of 3 right)</span></h2>${list(groups.gap, "gap")}` : ""}
+    ${groups.review.length ? `<h2>To review <span class="small muted">(2 of 3 right)</span></h2>${list(groups.review, "review")}` : ""}
+    ${groups.solid.length ? `<h2>Solid</h2>${list(groups.solid, "solid")}` : ""}
+    ${groups.gap.length + groups.review.length ? `<div class="panel" style="margin-top:20px"><h3>Study plan</h3>
+      <p class="small">Get a short explanation of each rule you missed, with examples and a journal exercise to practise it.</p>
+      <button class="btn primary" id="plan" ${state.settings.key ? "" : "disabled"}>${res.plan ? "Show my study plan" : "Make my study plan"}</button><div id="planOut" class="status"></div></div>` : ""}
+    ${res.wrong.length ? `<details style="margin-top:18px"><summary><b>The questions you got wrong (${res.wrong.length})</b></summary>${res.wrong.map(w => `<div class="sent"><div>${esc(w.sentence)}</div><div class="tr">${esc(w.explain)}</div><div class="small muted" style="margin-top:4px">${esc(w.topic)}</div></div>`).join("")}</details>` : ""}
+  </div>`;
+  $("#back").onclick = () => renderLevel();
+  const pb = $("#plan"); if (pb) pb.onclick = async () => {
+    const out = $("#planOut");
+    if (!res.plan) {
+      if (!navigator.onLine) { out.textContent = "You're offline. Try again when you're connected."; return; }
+      pb.disabled = true; out.innerHTML = spinner("Writing your study plan…");
+      onRetry = n => { out.innerHTML = spinner(`Google is busy, trying again (${n} of 3)…`); };
+      const weak = [...groups.gap, ...groups.review].map(x => x.topic);
+      try {
+        const r = await gemini([{text: `A German learner took a ${res.level} level check. These topics were weak: ${weak.map(w => `"${w}"`).join(", ")}.
+Questions they got wrong: ${res.wrong.slice(0, 30).map(w => `${w.sentence} (${w.topic})`).join(" | ")}
+For each weak topic, in ${state.settings.lang}, give: "rule": the rule explained simply in 2–4 sentences (German terms in German), "examples": 3 short German example sentences each with a translation, "exercise": one small task the learner can do by writing in their German journal today. Order the topics from most basic to most advanced.
+Return only JSON: {"plan":[{"topic":"...","rule":"...","examples":[{"de":"...","tr":"..."}],"exercise":"..."}]}`}]);
+        res.plan = r.plan || [];
+        const checks = (await dbGet("checks")) || {}; const arr = checks[res.level] || [];
+        const k = arr.findIndex(x => x.date === res.date && x.score === res.score && x.total === res.total); if (k >= 0) { arr[k].plan = res.plan; await dbSet("checks", checks); }
+      } catch (e) { out.textContent = e.message; pb.disabled = false; onRetry = null; return; }
+      onRetry = null;
+    }
+    pb.remove();
+    out.className = "";
+    out.innerHTML = res.plan.map(x => `<div class="sent"><h3>${esc(x.topic)}</h3><p class="small">${esc(x.rule)}</p>
+      ${(x.examples || []).map(e => `<div style="margin-top:6px">${esc(e.de)}<div class="tr" style="margin-top:0">${esc(e.tr)}</div></div>`).join("")}
+      ${x.exercise ? `<div class="gram">✍️ ${esc(x.exercise)}</div>` : ""}</div>`).join("");
+  };
+}
+
+/* ---------- settings & backup ---------- */
+function renderSettings() {
+  const s = state.settings;
+  $("#main").innerHTML = `<div class="wrap"><h1>Settings</h1>
+    <div class="panel" style="margin-top:18px">
+      <h3>Handwriting reading and explanations (free Gemini key)</h3>
+      <p class="small">Get a free key at <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a> (sign in with a Google account, tap <i>Create API key</i>, copy it, paste it here). The key stays on this iPad only.</p>
+      <p class="small muted">On the free tier Google may use what you send to improve its models, so don't write private details you wouldn't want read.</p>
+      <label class="field" for="key">Gemini API key</label>
+      <input type="password" id="key" value="${esc(s.key)}" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Paste your key">
+      <label class="field" for="model">Model name</label>
+      <input type="text" id="model" value="${esc(s.model)}" autocapitalize="off" spellcheck="false">
+      <p class="small muted" style="margin-top:6px">Leave this as <b>gemini-flash-latest</b> unless Google renames its free models. If the check says the model is unknown, look up the current free Flash model name in Google AI Studio.</p>
+      <div class="row" style="margin-top:10px"><button class="btn primary" id="saveKey">Save</button><button class="btn" id="testKey">Test connection</button></div>
+      <div class="status" id="keyStatus"></div>
+    </div>
+    <div class="panel">
+      <label class="field" for="lang" style="margin-top:0">Explanations in</label>
+      <select id="lang">${["English", "Français", "Deutsch (einfach)"].map(l => `<option ${s.lang === l ? "selected" : ""}>${l}</option>`).join("")}</select>
+      <label class="row" style="margin-top:16px;gap:10px"><input type="checkbox" id="finger" ${s.finger ? "checked" : ""} style="width:22px;height:22px"> <span>Write with my finger too <span class="muted small">(off: finger scrolls, only the pencil writes)</span></span></label>
+    </div>
+    <div class="panel">
+      <h3>Backup</h3>
+      <p class="small">Everything is saved on this iPad, inside this app. Make a backup now and then: when the share menu opens, choose <b>Save to Files</b> and then <b>iCloud Drive</b>. If the iPad is ever reset, <b>Restore from backup</b> brings everything back.</p>
+      <p class="small muted" id="bkLine"></p>
+      <div class="row"><button class="btn primary" id="exp">Save a backup file</button><button class="btn" id="imp">Restore from backup</button><input type="file" id="impFile" accept="application/json,.json" hidden></div>
+      <div class="status" id="bkStatus"></div>
+    </div>
+    <p class="small muted" style="margin-top:16px">Grammar checks by <a href="https://languagetool.org" target="_blank" rel="noopener">LanguageTool</a>. Deutschheft keeps no account and sends your writing only to LanguageTool and Gemini when you tap Check.</p>
+  </div>`;
+  const keyStatus = $("#keyStatus"); renderSettingsBackupLine();
+  const persist = async () => { s.key = $("#key").value.trim(); s.model = $("#model").value.trim() || "gemini-flash-latest"; await saveSettings(); };
+  $("#saveKey").onclick = async () => { await persist(); keyStatus.textContent = "Saved."; };
+  $("#testKey").onclick = async () => {
+    await persist(); keyStatus.innerHTML = `<span class="spin"></span>Testing…`;
+    try { const r = await gemini([{text: 'Translate "Guten Morgen" into English. Return only JSON: {"t":"..."}'}]); keyStatus.textContent = `It works. Gemini says: “${r.t || "ok"}”.`; }
+    catch (e) { keyStatus.textContent = e.message; }
+  };
+  $("#lang").onchange = async e => { s.lang = e.target.value; await saveSettings(); toast("Saved"); };
+  $("#finger").onchange = async e => { s.finger = e.target.checked; await saveSettings(); toast("Saved"); };
+  $("#exp").onclick = async () => { const ok = await doBackup(); if (ok) $("#bkStatus").textContent = "Backup saved."; renderSettingsBackupLine(); };
+  $("#imp").onclick = () => $("#impFile").click();
+  $("#impFile").onchange = async e => {
+    const f = e.target.files[0]; if (!f) return;
+    try {
+      const j = JSON.parse(await f.text());
+      if (j.app !== "deutschheft" || !j.data) throw new Error("This file is not a Deutschheft backup.");
+      if (!confirm("Restore this backup? Pages and log entries with the same date will be replaced by the backup's version.")) return;
+      for (const [k, v] of Object.entries(j.data)) { if (k === "settings" && state.settings.key) continue; await dbSet(k, v); }
+      await loadState(); $("#bkStatus").textContent = "Backup restored."; renderSettings();
+    } catch (err) { $("#bkStatus").textContent = err.message; }
+  };
+}
+
+async function doBackup() {
+  try {
+    const data = await dbAll();
+    const json = JSON.stringify({app: "deutschheft", version: 1, exported: new Date().toISOString(), data});
+    const name = `deutschheft-backup-${todayStr()}.json`;
+    const file = new File([json], name, {type: "application/json"});
+    let done = false;
+    if (navigator.canShare && navigator.canShare({files: [file]})) {
+      try { await navigator.share({files: [file], title: "Deutschheft backup"}); done = true; }
+      catch (e) { if (e.name === "AbortError") return false; }
+    }
+    if (!done) {
+      const a = document.createElement("a"); a.href = URL.createObjectURL(file); a.download = name; document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+    }
+    state.lastBackup = Date.now(); await dbSet("lastBackup", state.lastBackup);
+    return true;
+  } catch (e) { toast("Backup failed: " + e.message, 5000); return false; }
+}
+function renderSettingsBackupLine() {
+  const el = $("#bkLine"); if (!el) return;
+  el.textContent = state.lastBackup ? `Last backup: ${new Intl.DateTimeFormat("en-GB", {day: "numeric", month: "long", year: "numeric"}).format(new Date(state.lastBackup))}.` : "No backup saved yet.";
+}
+
+/* ---------- start ---------- */
+async function loadState() {
+  state.settings = {...DEFAULT_SETTINGS, ...((await dbGet("settings")) || {})};
+  state.pageIndex = (await dbGet("pageIndex")) || {};
+  state.lastBackup = (await dbGet("lastBackup")) || null;
+}
+(async function init() {
+  try { await loadState(); }
+  catch (e) { document.body.innerHTML = `<div class="wrap"><h1>Deutschheft can't open its storage</h1><p>${esc(e.message)}</p><p>In Safari, private browsing blocks storage. Open this page in a normal tab.</p></div>`; return; }
+  try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (_) {}
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) navigator.serviceWorker.register("sw.js").catch(() => {});
+  render();
+})();
+
+</script>
+</body>
+</html>
